@@ -1,0 +1,101 @@
+modmap:
+  - name: Global
+    remap:
+      CapsLock: Ctrl_L
+
+      Alt_R: Esc # for Ctrl+Click
+
+keymap:
+  - name: notion
+    application:
+      only: Notion
+    remap:
+      C-dot: C-k
+      C-w: C-backspace
+      C-h: backspace
+      C-m: enter
+      M-C-m: C-enter
+
+      M-j: M-down
+      M-k: M-up
+      M-h: C-Shift-Tab
+      M-l: C-Tab
+      M-C-h: C-left
+      M-C-l: C-right
+      M-C-shift-h: C-Shift-left
+      M-C-shift-l: C-Shift-right
+      M-x: C-w
+
+      shift-6: home
+      shift-4: end
+
+      C-j: down
+      C-k: up
+
+  - name: discord
+    application:
+      only: discord
+    remap:
+      C-dot: C-k
+      C-w: C-backspace
+      C-h: backspace
+      C-m: enter
+
+      M-j: M-down
+      M-k: M-up
+      M-h: left
+      M-l: right
+      M-C-h: C-left
+      M-C-l: C-right
+      Super-M-l: Super-M-l
+
+      C-j: down
+      C-k: up
+
+  - name: webbrowser
+    application:
+      only: [chromium, firefox]
+    remap:
+      C-dot: C-k
+      C-w: C-backspace
+      C-h: backspace
+      C-m: enter
+
+      M-a: M-1
+      M-s: M-2
+      M-d: M-3
+      M-f: M-4
+      M-g: M-5
+      M-z: M-6
+      M-v: M-7
+      M-x: M-8
+      M-c: M-9 
+      M-b: M-0
+      # M-C-h: C-left
+      # M-C-l: C-right
+      M-x: C-w
+      Super-M-l: Super-M-l
+
+      C-j: down
+      C-k: up
+
+      M-h: C-Shift-Tab
+      M-l: C-Tab
+
+      Alt_L: M
+
+  - name: wofi
+    application:
+      only: wofi
+    remap:
+      C-w: C-backspace
+      C-h: backspace
+      C-m: enter
+
+      M-h: left
+      M-l: right
+      M-C-h: C-left
+      M-C-l: C-right
+
+      C-j: down
+      C-k: up
