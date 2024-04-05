@@ -97,11 +97,11 @@
             "warning": 30,
             "critical": 20
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
+        "format": "{capacity}% {icon} ",
+        "format-charging": " {capacity}% ",
+        "format-plugged": " {capacity}% ",
         "format-alt-click": "click-right",
-        "format-alt": "{icon} {capacity}%",
+        "format-alt": "{icon} {capacity}% ",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
