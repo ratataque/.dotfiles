@@ -34,3 +34,5 @@ keyboard and vim oriented config
 -- vesktop (discord)
 
 ## credit
+
+[SolDoesTech config](https://github.com/soldoestech/hyprv4)
