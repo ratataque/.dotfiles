@@ -1,7 +1,8 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/ewan/projets/resources_relationnelles
+- /home/ewan/neovim_config
 - /home/ewan/.config/nvim
+- /home/ewan/projets/resources_relationnelles
 - /home/ewan/dotfiles
 - /home/ewan/keyboard/zmk-config
 - /home/ewan/projets/Astro_droid

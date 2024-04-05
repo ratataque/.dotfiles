@@ -9,7 +9,7 @@ keyboard and vim oriented config
 
 -- tmux
 
--- neovim config
+-- [neovim config](https://github.com/ratataque/neovim_config)
 
 -- xremap to emulate vim keymap on :
 
