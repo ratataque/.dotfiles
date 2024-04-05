@@ -34,7 +34,7 @@ keymap:
 
   - name: discord
     application:
-      only: discord
+      only: [discord, vesktop]
     remap:
       C-dot: C-k
       C-w: C-backspace
@@ -48,6 +48,17 @@ keymap:
       M-C-h: C-left
       M-C-l: C-right
       Super-M-l: Super-M-l
+
+      M-a: C-1
+      M-s: C-2
+      M-d: C-3
+      M-f: C-4
+      M-g: C-5
+      M-z: C-6
+      M-v: C-7
+      M-x: C-8
+      M-c: C-9 
+      M-b: C-0
 
       C-j: down
       C-k: up

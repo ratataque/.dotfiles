@@ -25,8 +25,9 @@
         "tray",
         "temperature",
         "custom/power_profile",
+        "bluetooth",
         "battery",
-        "hyprland/language",
+        // "hyprland/language",
         "custom/myhyprv",
         "custom/light_dark"
         // "clock"
@@ -46,14 +47,17 @@
         "tooltip": true
     },
 
-    "hyprland/language": {
-        "interval": 30,
-        "format": " {}",
-        // "keyboard-name": "Adv360",
-        "keyboard-name": "at-translated-set-2-keyboard",
-        "on-click": "~/.config/HyprV/hyprv_util swkb",
-        "signal": 8
+    "bluetooth": {
+      "format": "{status}",
+      "format-connected": "{device_alias}",
+      "format-connected-battery": "{device_alias} {device_battery_percentage}% {icon}",
+      "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+      "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
+
 
     "custom/power_btn": {
         "format": "",
@@ -78,27 +82,12 @@
         }
     },
 
-    // "wlr/workspaces": {
-    //   "active-only" : false,
-    //   "all-outputs" : false,
-    //   "disable-scroll" : false,
-    //   "on-scroll-up" : "hyprctl dispatch workspace e-1",
-    //   "on-scroll-down" : "hyprctl dispatch workspace e+1",
-    //   "format" : "{icon}",
-    //   "on-click" : "activate",
-    //   "show-special" : "false",
-    //   "sort-by-number" : true,
-    //   "persistent_workspaces" : {
-    //     "*" : 10
-    //   }
-    // },
-
     "cpu": {
         "interval": 10,
-        "format": "",
+        "format": " {usage}%",
         "max-length": 10,
         "format-alt-click": "click-right",
-        "format-alt": " {usage}%",
+        "format-alt": "",
         "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
     },
 
