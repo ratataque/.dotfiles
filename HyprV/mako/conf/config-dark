@@ -11,8 +11,8 @@ on-touch=dismiss
 
 # STYLE OPTIONS
 font=Fantasque Sans Mono 12
-width=300
-height=100
+width=400
+height=200
 margin=10
 padding=15
 border-size=2
@@ -28,19 +28,19 @@ default-timeout=5000
 ignore-timeout=0
 max-visible=5
 layer=overlay
-anchor=bottom-right
+anchor=top-right
 
 background-color=#1e1e2e
 text-color=#d9e0ee
-border-color=#313244
+border-color=#d9e0ee
 progress-color=over #89b4fa
 
 [urgency=low]
-border-color=#313244
+border-color=#55505e
 default-timeout=2000
 
 [urgency=normal]
-border-color=#313244
+border-color=#d9e0ee
 default-timeout=5000
 
 [urgency=high]

@@ -11,6 +11,12 @@
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 
+set -x GOPATH $HOME/go
+set -x PATH $PATH $GOPATH/bin
+
+set -x RUSTPATH $HOME/.cargo
+set -x PATH $PATH $RUSTPATH/bin
+
 set -U fish_user_paths $HOME/.tmuxifier/bin $fish_user_paths
 eval (tmuxifier init - fish)
 alias tm="tmuxifier"
@@ -20,7 +26,12 @@ alias discord="discord --enable-features=WaylandWindowDecorations --ozone-platfo
 alias dots="git --git-dir=$HOME/.dotfiles --work-tree=$HOME/.config" 
 
 ### EXPORT ###
-set -gx LC_ALL "C"
+# set -gx LC_ALL "C"
+set -gx LC_ALL "en_US.UTF-8"
+set -gx FONTCONFIG_PATH "/etc/fonts/"
+# set -gx LANG "en_US.UTF-8"
+# set -gx LANGUAGE "en_US.UTF-8"
+
 set -gx RUST_BACKTRACE 1
 set fish_greeting                                 # Supresses fish's intro message
 # set TERM "xterm-256color"                         # Sets the terminal type
@@ -71,8 +82,7 @@ set -e FZF_COMPLETE 0
 bind -M insert -e \t '__fzf_complete'
 set -U FZF_ENABLE_OPEN_PREVIEW 0
 
-bind -M insert \cu true
-bind -M insert \cU /cU
+bind -M insert \ed "sudo /home/ewan/go/bin/lazydocker"
 
 bind -M insert \e. "vim ."
 bind -M insert \ee vim
@@ -188,7 +198,7 @@ alias pac='sudo pacman -S'                  # update only standard pkgs
 alias pacu='sudo pacman -Syu'                  # update only standard pkgs
 alias pacsyyu='sudo pacman -Syyu'                # Refresh pkglist & update standard pkgs
 alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
-alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
+alias yayu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
 alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
 alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
@@ -254,6 +264,7 @@ alias ff='sudo find / -iname'
 # Or install it from the Arch User Repository: shell-color-scripts
 # colorscript random
 
+zoxide init fish | source
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
 

@@ -4,3 +4,7 @@ gui:
       - black
     cherryPickedCommitBgColor:
       - black
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
