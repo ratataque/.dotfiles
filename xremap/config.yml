@@ -6,6 +6,30 @@ modmap:
       Alt_R: Esc # for Ctrl+Click
 
 keymap:
+  - name: 1Password
+    application:
+      only: 1Password
+    remap:
+      C-dot: C-k
+      C-w: C-backspace
+      C-h: backspace
+      C-m: enter
+      M-C-m: C-enter
+
+      M-j: M-down
+      M-k: M-up
+      M-h: C-Shift-Tab
+      M-l: C-Tab
+      M-C-h: C-left
+      M-C-l: C-right
+      M-C-shift-h: C-Shift-left
+      M-C-shift-l: C-Shift-right
+
+      M-x: C-w
+
+      C-j: down
+      C-k: up
+
   - name: notion
     application:
       only: Notion

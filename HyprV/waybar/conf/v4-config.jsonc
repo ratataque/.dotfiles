@@ -13,7 +13,7 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "idle_inhibitor",
+        // "idle_inhibitor",
         "clock",
         "custom/updates"
     ],
@@ -21,16 +21,15 @@
         "cpu",
         "pulseaudio",
         "pulseaudio#microphone",
-        "backlight",
+        // "backlight",
         "tray",
-        "temperature",
-        "custom/power_profile",
-        "bluetooth",
+        // "bluetooth",
+        "custom/battery",
         "battery",
         // "hyprland/language",
-        "custom/myhyprv",
-        "custom/light_dark"
-        // "clock"
+        // "custom/myhyprv",
+        // "custom/light_dark"
+        "clock2"
     ],
     
     "include": [
@@ -48,7 +47,9 @@
     },
 
     "bluetooth": {
-      "format": "{status}",
+      "format": "off",
+      "on-click": "bluetoothctl power on",
+      "on-click-right": "bluetoothctl power off",
       "format-connected": "{device_alias}",
       "format-connected-battery": "{device_alias} {device_battery_percentage}% {icon}",
       "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
@@ -63,6 +64,14 @@
         "format": "",
         "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
         "tooltip": false
+    },
+
+    "custom/battery": {
+        "format": "{}",
+        // "exec": "~/.config/HyprV/waybar/scripts/zmk-battery.py",
+        "exec": "python ~/.config/HyprV/waybar/scripts/zmk-battery.py",
+        "interval": 60,
+        "tooltip": true
     },
 
     "custom/lock_screen": {
@@ -90,6 +99,11 @@
         "format-alt": "",
         "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
     },
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
 
     "battery": {
         "states": {
@@ -97,11 +111,11 @@
             "warning": 30,
             "critical": 20
         },
-        "format": "{capacity}% {icon} ",
-        "format-charging": " {capacity}% ",
-        "format-plugged": " {capacity}% ",
+        "format": "{capacity}% {icon} ",
+        "format-charging": " {capacity}% ",
+        "format-plugged": " {capacity}% ",
         "format-alt-click": "click-right",
-        "format-alt": "{icon} {capacity}% ",
+        "format-alt": "{icon} {capacity}% ",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
@@ -154,12 +168,47 @@
         "spacing": 10
     },
 
-    "clock" : {
+    // "clock" : {
+    //   "interval" : 60,
+    //   "format" : "{:%H:%M}",
+    //   "tooltip" : "true",
+    //   "tooltip-format" : " {:%d/%m}",
+    //   "format-alt" : " {:%d/%m}",
+    //   // "timezone" : "America/New_York"
+    // },
+
+    "clock": {
+      "format": "{:%R}",
+      // "format-alt": "{:%R  %a %b %d}",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "calendar": {
+        "mode"          : "month",
+        "mode-mon-col"  : 3,
+        "weeks-pos"     : "right",
+        "on-scroll"     : 1,
+        "on-click": "mode",
+        "format": {
+          "months":     "<span color='#ffead3'><b>{}</b></span>",
+          "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+          "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+          "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+          "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+        }
+      },
+      "actions": {
+        "on-click": "mode",
+        "on-click-forward": "tz_up",
+        "on-click-backward": "tz_down",
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
+      }
+    },
+
+    "clock2" : {
       "interval" : 60,
-      "format" : "󱑍 {:%H:%M}",
+      "format" : " {:%d/%m}",
       "tooltip" : "true",
-      "tooltip-format" : "",
-      "format-alt" : " {:%d/%m}"
+      // "timezone" : "America/New_York"
     },
 
     "custom/updates": {

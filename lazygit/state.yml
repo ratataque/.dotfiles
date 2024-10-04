@@ -1,22 +1,28 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/ewan/.config/nvim
-    - /home/ewan/projets/intranet_wgf
+    - /home/ewan/keyboard/zmk-config
+    - /home/ewan/keyboard/Adv360-Pro-ZMK
     - /home/ewan/projets/Astro_droid
+    - /home/ewan/.config/nvim
     - /home/ewan/projets/rulette_rousse
+    - /home/ewan/projets/advent_of_code_23
+    - /home/ewan/projets/cerveur
     - /home/ewan/projets/resources_relationnelles
+    - /home/ewan/projets/intranet_wgf
+    - /home/ewan/projets/AppDigitalisation
+    - /home/ewan/projets/fraise
+    - /home/ewan/.local/share/nvim/lazy/nvim-various-textobjs
+    - /home/ewan/.local/share/nvim/lazy/nvim-spider
     - /home/ewan/neovim_config
     - /home/ewan/dotfiles
-    - /home/ewan/keyboard/zmk-config
     - /home/ewan/.config/ranger/plugins/ranger_devicons
     - /home/ewan/projets/Mobil-test
-    - /home/ewan/projets/advent_of_code_23
     - /home/ewan/projets/home
     - /home/ewan/projets/Bot-trop-sex
     - /home/ewan/projets/todolist
     - /home/ewan/projets/projet_igniter
 startuppopupversion: 5
-lastversion: 0.42.0
+lastversion: 0.44.1
 customcommandshistory:
     - 'git config pull.rebase false  # merge'
     - git push welcomeView-reworked
@@ -29,6 +35,7 @@ customcommandshistory:
 hidecommandlog: false
 ignorewhitespaceindiffview: false
 diffcontextsize: 3
+renamesimilaritythreshold: 50
 localbranchsortorder: recency
 remotebranchsortorder: alphabetical
 gitlogorder: topo-order

@@ -80,12 +80,10 @@ class fzf_select(Command):
 
         if self.quantifier:
             # match only directories
-            command = "find -L . \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -type d -print 2> /dev/null | sed 1d | cut -b3- | fzf +m"
+            command = "fd ."
         else:
             # match files and directories
-            command = "find -L . \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -print 2> /dev/null | sed 1d | cut -b3- | fzf +m"
+            command = "fd -H -t d .| fzf +m"
         fzf = self.fm.execute_command(command, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()
         if fzf.returncode == 0:
@@ -112,9 +110,9 @@ class fzf_locate(Command):
         import subprocess
 
         if self.quantifier:
-            command = "locate home media | fzf -e -i"
+            command = "fd -H . | fzf -e -i"
         else:
-            command = "locate home media | fzf -e -i"
+            command = "fd -H . | fzf -e -i"
         fzf = self.fm.execute_command(command, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()
         if fzf.returncode == 0:

@@ -1,1 +1,216 @@
-/home/ewan/.config/HyprV/waybar/conf/v4-config.jsonc
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 20,
+    "modules-left": [
+        "custom/power_btn",
+        "custom/lock_screen",
+        // "wlr/workspaces",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        // "idle_inhibitor",
+        "clock",
+        "custom/updates"
+    ],
+    "modules-right": [
+        "cpu",
+        "pulseaudio",
+        "pulseaudio#microphone",
+        // "backlight",
+        "tray",
+        // "bluetooth",
+        "custom/battery",
+        "battery",
+        // "hyprland/language",
+        // "custom/myhyprv",
+        // "custom/light_dark"
+        "clock2"
+    ],
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰛐",
+            "deactivated": "󰛑"
+        },
+        "tooltip": true
+    },
+
+    "bluetooth": {
+      "format": "off",
+      "on-click": "bluetoothctl power on",
+      "on-click-right": "bluetoothctl power off",
+      "format-connected": "{device_alias}",
+      "format-connected-battery": "{device_alias} {device_battery_percentage}% {icon}",
+      "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+      "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+
+    "custom/power_btn": {
+        "format": "",
+        "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+        "tooltip": false
+    },
+
+    "custom/battery": {
+        "format": "  {}",
+        // "exec": "~/.config/HyprV/waybar/scripts/zmk-battery.py",
+        "exec": "python ~/.config/waybar/scripts/zmk-battery.py",
+        "interval": 60,
+        "tooltip": true
+    },
+
+    "custom/lock_screen": {
+        "format": "",
+        "on-click": "sh -c '(sleep 0.5s; swaylock)' & disown",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        // "active-only" : false,
+        // "all-outputs" : false,
+        // "disable-scroll": true,
+        // "all-outputs": true,
+        "on-click": "activate",
+        "persistent-workspaces" : {
+          "*" : 10
+        }
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "  {usage}% ",
+        "max-length": 10,
+        "format-alt-click": "click-right",
+        "format-alt": "",
+        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    },
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
+
+    "battery": {
+        "states": {
+            "good": 80,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{capacity}% {icon}  ",
+        "format-charging": " {capacity}%  ",
+        "format-plugged": " {capacity}%  ",
+        "format-alt-click": "click-right",
+        "format-alt": "{icon} {capacity}%  ",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": " ",
+        "on-click": "~/.config/HyprV/waybar/scripts/volume --toggle",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "~/.config/HyprV/waybar/scripts/volume --inc",
+        "on-scroll-down": "~/.config/HyprV/waybar/scripts/volume --dec",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "tooltip": true,
+        "tooltip-format": "{icon} at {volume}%"
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted": " ",
+        "on-click": "~/.config/HyprV/waybar/scripts/volume --toggle-mic",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "~/.config/HyprV/waybar/scripts/volume --mic-inc",
+        "on-scroll-down": "~/.config/HyprV/waybar/scripts/volume --mic-dec",
+        "scroll-step": 5,
+        "tooltip": true,
+        "tooltip-format": " at {volume}%"
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}",
+        "format-alt-click": "click-right",
+        "format-alt": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "~/.config/HyprV/waybar/scripts/brightness --inc",
+        "on-scroll-down": "~/.config/HyprV/waybar/scripts/brightness --dec"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 12
+    },
+
+    // "clock" : {
+    //   "interval" : 60,
+    //   "format" : "{:%H:%M}",
+    //   "tooltip" : "true",
+    //   "tooltip-format" : " {:%d/%m}",
+    //   "format-alt" : " {:%d/%m}",
+    //   // "timezone" : "America/New_York"
+    // },
+
+    "clock": {
+      "format": "{:%R}",
+      // "format-alt": "{:%R  %a %b %d}",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "calendar": {
+        "mode"          : "month",
+        "mode-mon-col"  : 3,
+        "weeks-pos"     : "right",
+        "on-scroll"     : 1,
+        "on-click": "mode",
+        "format": {
+          "months":     "<span color='#ffead3'><b>{}</b></span>",
+          "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+          "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+          "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+          "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+        }
+      },
+      "actions": {
+        "on-click": "mode",
+        "on-click-forward": "tz_up",
+        "on-click-backward": "tz_down",
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
+      }
+    },
+
+    "clock2" : {
+      "interval" : 60,
+      "format" : " {:%d/%m}",
+      "tooltip" : "true",
+      // "timezone" : "America/New_York"
+    },
+
+    "custom/updates": {
+        "format": "{}",
+        "exec": "~/.config/HyprV/waybar/scripts/update-sys",
+        "on-click": "~/.config/HyprV/waybar/scripts/update-sys update",
+        "interval": 300,
+        "tooltip": true
+    }
+}

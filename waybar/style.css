@@ -1,1 +1,173 @@
-/home/ewan/.config/HyprV/waybar/style/v4-style-dark.css
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 16px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(21, 18, 27, 0);
+  color: #f6f7fc;
+}
+
+tooltip {
+  background: #1e1e2e;
+  opacity: 0.8;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #11111b;
+}
+
+tooltip label {
+  color: #f6f7fc;
+}
+
+.modules-right {
+  padding-left: 12px;
+  padding-top: 4px;
+  /* height: 10px; */
+  /* background: #11111b; */
+  /* border-radius: 0px 0px 0px 50px; */
+  /* border-width: 4px; */
+  /* border-top-width: 0px; */
+  /* border-right-width: 0px; */
+  /* border-style: solid; */
+  /* border-color: #81a1c1; */
+  /* border-color: #f6f7fc; */
+  /* filter: blur(4px); */
+}
+
+#workspaces button {
+  padding: 5px;
+  color: #f6f7fc;
+  margin-right: 4px;
+}
+
+#workspaces button.active {
+  color: #000000;
+  background: #81a1c1;
+  border-radius: 10px;
+}
+
+#workspaces button:hover {
+  background: #b0835d;
+  color: #000001;
+  border-radius: 10px;
+}
+
+#workspaces button.empty {
+  color: #333333;
+}
+
+#custom-power_btn {
+  padding: 0px 8px;
+  margin: 0px 6px;
+  border: 0px;
+}
+
+#custom-launch_wofi,
+#custom-launch_firefox,
+#custom-launch_thunderbird,
+#custom-launch_thunar,
+#custom-launch_kitty,
+#custom-lock_screen,
+#custom-light_dark,
+#custom-power_btn,
+#custom-power_profile,
+#custom-weather,
+#custom-myhyprv,
+#window,
+#disk,
+#cpu,
+#custom-updates,
+#clock,
+#battery,
+/* #pulseaudio, */
+/* #network, */
+#tray,
+/* #bluetooth, */
+#workspaces,
+#backlight {
+  /* background: rgba(21, 18, 27, 0); */
+  opacity: 1;
+  /* padding: 0px 8px; */
+  margin: 0px 10px;
+  border: 0px;
+}
+
+#battery.critical {
+  color: #e92d4d;
+}
+
+#temperature.critical {
+  color: #e92d4d;
+}
+
+#workspaces {
+  padding-right: 0px;
+  padding-left: 5px;
+}
+
+#window {
+  border-radius: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#pulseaudio,
+#cpu,
+#battery,
+#custom-battery,
+#tray {
+  border-radius: 10px 3px 10px 3px;
+  padding: 0px 8px;
+  /* border: 1px solid #11111b; */
+}
+
+#cpu {
+  background: #252525;
+}
+#pulseaudio {
+  background: #37434e;
+  margin: 0px 4px;
+}
+#tray {
+  background: #4c4143;
+}
+#custom-battery {
+  background: #682e39;
+}
+#battery {
+  background: #973b47;
+}
+
+#pulseaudio {
+  /* margin-right: 8px; */
+}
+
+@define-color col_border_solid rgba(120, 120, 120, 1);
+@define-color col_border_trans rgba(120, 120, 120, 0);
+
+#waybar > box:nth-child(2) > box:nth-child(3) > * > * {
+  /* padding: 0 5px; */
+}
+
+#waybar > box:nth-child(2) > box:nth-child(3) > *:not(:first-child) > * {
+  border-color: #58585f;
+  /* border: 1px 0px solid; */
+  background-size: 2px 60%;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
+#waybar > box:nth-child(2) > box:nth-child(1) > :not(:first-child) > * > label {
+  padding: 0 8px;
+  border-color: #58585f;
+  border: 1px;
+  background-size: 2px 60%;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}

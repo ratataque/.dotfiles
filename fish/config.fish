@@ -22,6 +22,9 @@ eval (tmuxifier init - fish)
 alias tm="tmuxifier"
 alias tmux="tmux -u"
 alias discord="discord --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto &"
+alias 1="1password"
+
+alias cat="bat"
 
 alias dots="git --git-dir=$HOME/.dotfiles --work-tree=$HOME/.config" 
 
@@ -258,7 +261,7 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 
 
 
-alias ff='sudo find / -iname'
+alias ff='fastfetch'
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
 # Or install it from the Arch User Repository: shell-color-scripts
