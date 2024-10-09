@@ -1,9 +1,10 @@
 lastupdatecheck: 0
 recentrepos:
+    - /home/ewan/projets/time_manager
+    - /home/ewan/neovim_config
     - /home/ewan/keyboard/zmk-config
     - /home/ewan/keyboard/Adv360-Pro-ZMK
     - /home/ewan/projets/Astro_droid
-    - /home/ewan/.config/nvim
     - /home/ewan/projets/rulette_rousse
     - /home/ewan/projets/advent_of_code_23
     - /home/ewan/projets/cerveur
@@ -13,7 +14,6 @@ recentrepos:
     - /home/ewan/projets/fraise
     - /home/ewan/.local/share/nvim/lazy/nvim-various-textobjs
     - /home/ewan/.local/share/nvim/lazy/nvim-spider
-    - /home/ewan/neovim_config
     - /home/ewan/dotfiles
     - /home/ewan/.config/ranger/plugins/ranger_devicons
     - /home/ewan/projets/Mobil-test
@@ -24,10 +24,10 @@ recentrepos:
 startuppopupversion: 5
 lastversion: 0.44.1
 customcommandshistory:
+    - git config pull.rebase false
     - 'git config pull.rebase false  # merge'
     - git push welcomeView-reworked
     - git config rebase false
-    - git config pull.rebase false
     - git rm -r --cached .idea
     - git push origin main:welcomeView-reworked
     - git pull main

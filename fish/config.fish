@@ -14,6 +14,8 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
+set -gx GTK_THEME "Adwaita-dark"
+
 set -x RUSTPATH $HOME/.cargo
 set -x PATH $PATH $RUSTPATH/bin
 
