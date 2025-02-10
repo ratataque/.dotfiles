@@ -8,16 +8,33 @@
 ### ADDING TO THE PATH
 # First line removes the path; second line sets it.  Without the first line,
 # your path gets massive and fish becomes very slow.
+
+########################################################################################### gameday
+########################################################################################### gameday
+
+
+
+
+
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
+set -gx QT_QPA_PLATFORM wayland
+set -gx XDG_CONFIG_HOME ~/.config
 set -gx GTK_THEME "Adwaita-dark"
 
 set -x RUSTPATH $HOME/.cargo
 set -x PATH $PATH $RUSTPATH/bin
+
+set -gx ELECTRON_OZONE_PLATFORM_HINT wayland 
+set -gx WLR_RENDERER vulkan
+set -gx WLR_DRM_NO_ATOMIC 1
+
+set -gx AMD_VULKAN_ICD RADV
+set -gx VK_ICD_FILENAMES /usr/share/vulkan/icd.d/radeon_icd.x86_64.json
 
 set -U fish_user_paths $HOME/.tmuxifier/bin $fish_user_paths
 eval (tmuxifier init - fish)
@@ -87,7 +104,7 @@ set -e FZF_COMPLETE 0
 bind -M insert -e \t '__fzf_complete'
 set -U FZF_ENABLE_OPEN_PREVIEW 0
 
-bind -M insert \ed "sudo /home/ewan/go/bin/lazydocker"
+bind -M insert \ed "/home/ewan/go/bin/lazydocker"
 
 bind -M insert \e. "vim ."
 bind -M insert \ee vim
@@ -273,3 +290,7 @@ zoxide init fish | source
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

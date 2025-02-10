@@ -1,9 +1,8 @@
 gui:
   theme:
-    selectedLineBgColor:
-      - black
-    cherryPickedCommitBgColor:
-      - black
+    selectedLineBgColor: ["#2229C4", "bold"]
+
+    cherryPickedCommitBgColor: ["#2229C4", "bold"]
 git:
   paging:
     colorArg: always

@@ -1,8 +1,17 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/ewan/projets/time_manager
-    - /home/ewan/neovim_config
+    - /home/ewan/projets/T-DEV-703-Mobile
+    - /home/ewan/projets/T-DEV-702-Api
+    - /home/ewan/.config/nvim
+    - /home/ewan/projets/advent_of_code_24
     - /home/ewan/keyboard/zmk-config
+    - /home/ewan/projets/T-DEV-701-Devops
+    - /home/ewan/projets/time_manager
+    - /home/ewan/projets/T-DEV-701-Devops-bootstrap
+    - /home/ewan/.local/share/nvim/lazy/harpoon
+    - /home/ewan/projets/Harvest-Hub
+    - /home/ewan/projets/fraise
+    - /home/ewan/neovim_config
     - /home/ewan/keyboard/Adv360-Pro-ZMK
     - /home/ewan/projets/Astro_droid
     - /home/ewan/projets/rulette_rousse
@@ -11,7 +20,6 @@ recentrepos:
     - /home/ewan/projets/resources_relationnelles
     - /home/ewan/projets/intranet_wgf
     - /home/ewan/projets/AppDigitalisation
-    - /home/ewan/projets/fraise
     - /home/ewan/.local/share/nvim/lazy/nvim-various-textobjs
     - /home/ewan/.local/share/nvim/lazy/nvim-spider
     - /home/ewan/dotfiles
@@ -22,9 +30,17 @@ recentrepos:
     - /home/ewan/projets/todolist
     - /home/ewan/projets/projet_igniter
 startuppopupversion: 5
-lastversion: 0.44.1
+lastversion: 0.45.2
 customcommandshistory:
     - git config pull.rebase false
+    - git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
+    - git remote add origin https://github.com/ratataque/neovim_config
+    - git remote rm origin
+    - git remote add origin https://github.com/ratataque/harpoon.git
+    - git pull
+    - git rm --cached `git ls-files -i -c --exclude-from=frontend/.gitignore`
+    - git rm --cached frontend/public/video/
+    - git rm -r --cached .
     - 'git config pull.rebase false  # merge'
     - git push welcomeView-reworked
     - git config rebase false

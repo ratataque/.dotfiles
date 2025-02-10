@@ -6,6 +6,10 @@ modmap:
       Alt_R: Esc # for Ctrl+Click
 
 keymap:
+  - name: all
+    remap:
+      C-m: enter
+
   - name: 1Password
     application:
       only: 1Password
@@ -13,7 +17,7 @@ keymap:
       C-dot: C-k
       C-w: C-backspace
       C-h: backspace
-      C-m: enter
+      # C-m: enter
       M-C-m: C-enter
 
       M-j: M-down
@@ -37,7 +41,7 @@ keymap:
       C-dot: C-k
       C-w: C-backspace
       C-h: backspace
-      C-m: enter
+      # C-m: enter
       M-C-m: C-enter
 
       M-j: M-down
@@ -63,7 +67,7 @@ keymap:
       C-dot: C-k
       C-w: C-backspace
       C-h: backspace
-      C-m: enter
+      # C-m: enter
 
       M-j: M-down
       M-k: M-up
@@ -94,7 +98,7 @@ keymap:
       C-dot: C-k
       C-w: C-backspace
       C-h: backspace
-      C-m: enter
+      # C-m: enter
 
       M-a: M-1
       M-s: M-2
@@ -125,7 +129,7 @@ keymap:
     remap:
       C-w: C-backspace
       C-h: backspace
-      C-m: enter
+      # C-m: enter
 
       M-h: left
       M-l: right
