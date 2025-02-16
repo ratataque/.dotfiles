@@ -1,8 +1,8 @@
 lastupdatecheck: 0
 recentrepos:
+    - /home/ewan/.config/nvim
     - /home/ewan/projets/T-DEV-703-Mobile
     - /home/ewan/projets/T-DEV-702-Api
-    - /home/ewan/.config/nvim
     - /home/ewan/projets/advent_of_code_24
     - /home/ewan/keyboard/zmk-config
     - /home/ewan/projets/T-DEV-701-Devops
@@ -30,10 +30,10 @@ recentrepos:
     - /home/ewan/projets/todolist
     - /home/ewan/projets/projet_igniter
 startuppopupversion: 5
-lastversion: 0.45.2
+lastversion: 0.46.0
 customcommandshistory:
-    - git config pull.rebase false
     - git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
+    - git config pull.rebase false
     - git remote add origin https://github.com/ratataque/neovim_config
     - git remote rm origin
     - git remote add origin https://github.com/ratataque/harpoon.git

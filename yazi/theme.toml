@@ -1,0 +1,6 @@
+# [flavor]
+# use = "moonfly"
+[flavor]
+# dark = "catppuccin-frappe"
+# dark = "timu-macos-dark"
+dark = "moonfly"

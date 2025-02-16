@@ -1,0 +1,159 @@
+[manager]
+cwd = { fg = "#5297a5" }
+
+# Hovered
+hovered         = { fg = "#ffffff", bg = "#4e9dff" }
+preview_hovered = { underline = true }
+
+# Find
+find_keyword  = { fg = "#ffb350", bold = true, italic = true, underline = true }
+find_position = { fg = "#e45c9c", bg = "reset", bold = true, italic = true }
+
+# Marker
+marker_copied   = { fg = "#6ae073", bg = "#6ae073" }
+marker_cut      = { fg = "#ff6e64", bg = "#ff6e64" }
+marker_marked   = { fg = "#5297a5", bg = "#5297a5" }
+marker_selected = { fg = "#ffb350", bg = "#ffb350" }
+
+# Tab
+tab_active   = { reversed = true }
+tab_inactive = {}
+tab_width    = 1
+
+# Count
+count_copied   = { fg = "#ffffff", bg = "#6ae073" }
+count_cut      = { fg = "#ffffff", bg = "#ff6e64" }
+count_selected = { fg = "#ffffff", bg = "#ffb350" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#8c8c8c" }
+
+
+[mode]
+normal_main = { fg = "#ffffff", bg = "#4e9dff", bold = true }
+normal_alt  = { fg = "#4e9dff", bg = "#dedede" }
+
+# Select mode
+select_main = { fg = "#ffffff", bg = "#6ae073", bold = true }
+select_alt  = { fg = "#6ae073", bg = "#dedede" }
+
+# Unset mode
+unset_main = { fg = "#ffffff", bg = "#cd7bf6", bold = true }
+unset_alt  = { fg = "#cd7bf6", bg = "#dedede" }
+
+
+[status]
+separator_open  = ""
+separator_close = ""
+
+# Progress
+progress_label  = { fg = "#ffffff", bold = true }
+progress_normal = { fg = "#4e9dff", bg = "#dedede" }
+progress_error  = { fg = "#ff6e64", bg = "#dedede" }
+
+# Permissions
+perm_sep   = { fg = "#8c8c8c" }
+perm_type  = { fg = "#4e9dff" }
+perm_read  = { fg = "#ffb350" }
+perm_write = { fg = "#ff6e64" }
+perm_exec  = { fg = "#6ae073" }
+
+
+[pick]
+border   = { fg = "#4e9dff" }
+active   = { fg = "#e45c9c", bold = true }
+inactive = {}
+
+
+[input]
+border   = { fg = "#4e9dff" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+
+[completion]
+border = { fg = "#4e9dff" }
+
+
+[tasks]
+border  = { fg = "#4e9dff" }
+title   = {}
+hovered = { fg = "#e45c9c", underline = true }
+
+
+[which]
+mask            = { bg = "#dedede" }
+cand            = { fg = "#5297a5" }
+rest            = { fg = "#7c7f93" }
+desc            = { fg = "#e45c9c" }
+separator       = "  "
+separator_style = { fg = "#acb0be" }
+
+
+[help]
+on      = { fg = "#5297a5" }
+run     = { fg = "#e45c9c" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#dedede", bg = "#393939" }
+
+
+[notify]
+title_info  = { fg = "#6ae073" }
+title_warn  = { fg = "#ffb350" }
+title_error = { fg = "#ff6e64" }
+
+
+[filetype]
+rules = [
+    # Images
+    { mime = "image/*", fg = "#ffb350" },
+
+    # Media
+    { mime = "{audio,video}/*", fg = "#ffb350" },
+
+    # Archives
+    { mime = "application/{zip,rar,7z*,tar,gzip}", fg = "#00d1e9" },
+    { mime = "application/{xz,zstd,bzip*,lzma,compress}", fg = "#00d1e9" },
+    { mime = "application/{archive,cpio,arj,xar,ms-cab*}", fg = "#00d1e9" },
+
+    # Broken links
+    { name = "*", is = "orphan", fg = "#8c8c8c", crossed = true },
+
+    # Symlinks files
+    { name = "*", is = "link", fg = "#e45c9c" },
+    { name = "*/", is = "link", fg = "#5297a5" },
+
+    # Executables
+    { name = "*", is = "exec", fg = "#ff6e64" },
+
+    # Languages
+    { name = "*.{c,c++,cake,cats,cc,cl,cp,cpp,cs}", fg = "#6ae073" },
+    { name = "*.{cshtml,css,csx,cxx,emacs,go}", fg = "#6ae073" },
+    { name = "*.{h,h++,hh,hpp,hs,hxx,idc,inl,ipp,ipynb}", fg = "#6ae073" },
+    { name = "*.{java,jl,js,json}", fg = "#6ae073" },
+    { name = "*.{ksh,l,lisp,lsp,lua,m}", fg = "#6ae073" },
+    { name = "*.{php,pl,ps1,py,ron}", fg = "#6ae073" },
+    { name = "*.{sass,sh,tcc,tpp}", fg = "#6ae073" },
+    { name = "*.{vbs,w,}", fg = "#6ae073" },
+    { name = "*.{sh,bash,zsh,fish}", fg = "#6ae073" },
+
+    { name = "*.{cfg,conf,yaml,yml,toml,inc}", fg = "#00d1e9" },
+    { name = "*.{diff,patch,matlab,ron}", fg = "#00d1e9" },
+
+    { name = "*.{jinja,markdown,md,mkd,mkdn,mkdown,tex}", fg = "#5297a5" },
+    { name = "*.{htm,html,xhtml,xml}", fg = "#5297a5" },
+
+    # Emacs
+    { name = "*.{el,elc}", fg = "#6ae073" },
+    { name = "*.{org}", fg = "#cd7bf6" },
+
+    # Documents
+    { name = "*.{pdf,txt,rtf}", fg = "#5e5e5e" },
+    { name = "*.{pdf,doc,docx,xls,xlsx,ppt,pptx}", fg = "#5e5e5e" },
+
+    # Fallback
+    { name = "*", fg = "#393939" },
+    { name = "*/", fg = "#4e9dff" }
+]

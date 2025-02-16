@@ -108,7 +108,7 @@ bind -M insert \ed "/home/ewan/go/bin/lazydocker"
 
 bind -M insert \e. "vim ."
 bind -M insert \ee vim
-bind -M insert \er "ranger"
+bind -M insert \er "yazi"
 bind -M insert \e\x20 __fish_list_current_token # my preferred listing
 bind -e \el 
 bind -M insert \ea "pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
