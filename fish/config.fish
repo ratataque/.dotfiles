@@ -9,8 +9,16 @@
 # First line removes the path; second line sets it.  Without the first line,
 # your path gets massive and fish becomes very slow.
 
-########################################################################################### gameday
-########################################################################################### gameday
+########################################################################################### env
+if test -f /etc/.env
+  cat /etc/.env | while read line
+    set -l env_var (string split -m 1 "=" $line)
+    set -l env_name $env_var[1]
+    set -l env_value $env_var[2]
+    set -gx $env_name $env_value
+  end
+end
+########################################################################################### env
 
 
 
@@ -28,6 +36,21 @@ set -gx GTK_THEME "Adwaita-dark"
 
 set -x RUSTPATH $HOME/.cargo
 set -x PATH $PATH $RUSTPATH/bin
+
+# set -gx ANDROID_HOME ~/.config/.android
+set -gx ANDROID_HOME ~/Android
+set -gx ANDROID_SDK_ROOT ~/Android/Sdk
+# set -gx ANDROID_SDK_ROOT $ANDROID_HOME
+set -gx ANDROID_AVD_HOME ~/.config/.android/avd
+# set -gx PATH $PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools
+# set -gx PATH $PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools
+
+
+set -gx GTK_USE_PORTAL 1  # Force GTK apps to use XDG portals
+set -gx GDK_BACKEND wayland
+
+set -gx _JAVA_AWT_WM_NONREPARENTING 1
+set -gx QT_QPA_PLATFORM xcb
 
 set -gx ELECTRON_OZONE_PLATFORM_HINT wayland 
 set -gx WLR_RENDERER vulkan
@@ -61,6 +84,7 @@ set EDITOR "nvim"                 # $EDITOR use Emacs in terminal
 set -gx EDITOR "nvim"                 # $EDITOR use Emacs in terminal
 set VISUAL "nvim"              # $VISUAL use Emacs in GUI mode
 set -gx VISUAL "nvim"              # $VISUAL use Emacs in GUI mode
+set -gx NVIM_SESSIONS "/sessions"              # $VISUAL use Emacs in GUI mode
 
 set -gx XDG_CONFIG_DIRS "/home/ewan/.config/"
 
@@ -69,6 +93,7 @@ set -gx XDG_CONFIG_DIRS "/home/ewan/.config/"
 
 ### "bat" as manpager
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+
 
 
 function share
@@ -101,7 +126,7 @@ bind -M insert \cf '__fzf_cd --hidden'
 set -U FZF_OPEN_COMMAND "fd -H -u --type f --exclude node_modules . \$dir"
 set -U FZF_TMUX 1
 set -e FZF_COMPLETE 0
-bind -M insert -e \t '__fzf_complete'
+bind -M insert \t '__fzf_complete'
 set -U FZF_ENABLE_OPEN_PREVIEW 0
 
 bind -M insert \ed "/home/ewan/go/bin/lazydocker"
@@ -277,6 +302,9 @@ alias jctl="journalctl -p 3 -xb"
 
 # the terminal rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+
+
+
 
 
 

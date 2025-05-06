@@ -1,12 +1,13 @@
 lastupdatecheck: 0
 recentrepos:
+    - /home/ewan/projets/time_manager
     - /home/ewan/.config/nvim
+    - /home/ewan/projets/epitech-strasbourg-jam-05-2025
     - /home/ewan/projets/T-DEV-703-Mobile
     - /home/ewan/projets/T-DEV-702-Api
     - /home/ewan/projets/advent_of_code_24
     - /home/ewan/keyboard/zmk-config
     - /home/ewan/projets/T-DEV-701-Devops
-    - /home/ewan/projets/time_manager
     - /home/ewan/projets/T-DEV-701-Devops-bootstrap
     - /home/ewan/.local/share/nvim/lazy/harpoon
     - /home/ewan/projets/Harvest-Hub
@@ -30,9 +31,10 @@ recentrepos:
     - /home/ewan/projets/todolist
     - /home/ewan/projets/projet_igniter
 startuppopupversion: 5
-lastversion: 0.46.0
+lastversion: 0.50.0
 customcommandshistory:
     - git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
+    - git config pull.rebase true
     - git config pull.rebase false
     - git remote add origin https://github.com/ratataque/neovim_config
     - git remote rm origin
