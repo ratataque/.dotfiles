@@ -1,7 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/ewan/projets/time_manager
     - /home/ewan/.config/nvim
+    - /home/ewan/projets/time_manager
     - /home/ewan/projets/epitech-strasbourg-jam-05-2025
     - /home/ewan/projets/T-DEV-703-Mobile
     - /home/ewan/projets/T-DEV-702-Api
@@ -9,7 +9,6 @@ recentrepos:
     - /home/ewan/keyboard/zmk-config
     - /home/ewan/projets/T-DEV-701-Devops
     - /home/ewan/projets/T-DEV-701-Devops-bootstrap
-    - /home/ewan/.local/share/nvim/lazy/harpoon
     - /home/ewan/projets/Harvest-Hub
     - /home/ewan/projets/fraise
     - /home/ewan/neovim_config
@@ -21,8 +20,6 @@ recentrepos:
     - /home/ewan/projets/resources_relationnelles
     - /home/ewan/projets/intranet_wgf
     - /home/ewan/projets/AppDigitalisation
-    - /home/ewan/.local/share/nvim/lazy/nvim-various-textobjs
-    - /home/ewan/.local/share/nvim/lazy/nvim-spider
     - /home/ewan/dotfiles
     - /home/ewan/.config/ranger/plugins/ranger_devicons
     - /home/ewan/projets/Mobil-test
