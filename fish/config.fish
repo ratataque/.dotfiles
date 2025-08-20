@@ -36,6 +36,8 @@ set -gx GTK_THEME "Adwaita-dark"
 
 set -x RUSTPATH $HOME/.cargo
 set -x PATH $PATH $RUSTPATH/bin
+set -gx LIBCLANG_PATH "/home/ewan/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-19.1.2_20250225/esp-clang/lib"
+set -gx PATH "/home/ewan/.rustup/toolchains/esp/xtensa-esp-elf/esp-14.2.0_20240906/xtensa-esp-elf/bin:$PATH"
 
 # set -gx ANDROID_HOME ~/.config/.android
 set -gx ANDROID_HOME ~/Android
@@ -285,6 +287,7 @@ alias pscpu='ps auxf | sort -nr -k 3'
 alias merge='xrdb -merge ~/.Xresources'
 
 # git
+alias gitrmcached='git rm --cached -r (git ls-files -i -c --exclude-from=".gitignore")'
 alias addup='git add -u'
 alias addall='git add .'
 alias branch='git branch'
@@ -304,6 +307,10 @@ alias jctl="journalctl -p 3 -xb"
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 
+# vpn
+alias grimaldev='sudo openvpn --config /etc/openvpn/client/ewan_grimaldev.ovpn'
+alias vpn_maison='nmcli connection down "tun0" ; sudo openvpn --config /etc/openvpn/client/ewan_grimely.ovpn'
+# alias grimaldev='sudo openvpn --config /etc/openvpn/client/grimaldev.ovpn'
 
 
 

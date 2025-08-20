@@ -95,7 +95,7 @@ keymap:
     application:
       only: [chromium, firefox]
     remap:
-      C-dot: C-k
+      # C-dot: C-k
       C-w: C-backspace
       C-h: backspace
       # C-m: enter
