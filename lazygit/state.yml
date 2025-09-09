@@ -1,5 +1,6 @@
 lastupdatecheck: 0
 recentrepos:
+    - /home/ewan/projets/dokploy
     - /home/ewan/.config/nvim
     - /home/ewan/projets/esp8266-ch340g-flasher
     - /home/ewan/projets/TNSA810/machine-3/backend-prod

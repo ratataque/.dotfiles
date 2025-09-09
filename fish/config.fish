@@ -11,18 +11,14 @@
 
 ########################################################################################### env
 if test -f /etc/.env
-  cat /etc/.env | while read line
-    set -l env_var (string split -m 1 "=" $line)
-    set -l env_name $env_var[1]
-    set -l env_value $env_var[2]
-    set -gx $env_name $env_value
-  end
+    cat /etc/.env | while read line
+        set -l env_var (string split -m 1 "=" $line)
+        set -l env_name $env_var[1]
+        set -l env_value $env_var[2]
+        set -gx $env_name $env_value
+    end
 end
 ########################################################################################### env
-
-
-
-
 
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
@@ -32,7 +28,7 @@ set -x PATH $PATH $GOPATH/bin
 
 set -gx QT_QPA_PLATFORM wayland
 set -gx XDG_CONFIG_HOME ~/.config
-set -gx GTK_THEME "Adwaita-dark"
+set -gx GTK_THEME Adwaita-dark
 
 set -x RUSTPATH $HOME/.cargo
 set -x PATH $PATH $RUSTPATH/bin
@@ -47,14 +43,13 @@ set -gx ANDROID_AVD_HOME ~/.config/.android/avd
 # set -gx PATH $PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools
 # set -gx PATH $PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools
 
-
-set -gx GTK_USE_PORTAL 1  # Force GTK apps to use XDG portals
+set -gx GTK_USE_PORTAL 1 # Force GTK apps to use XDG portals
 set -gx GDK_BACKEND wayland
 
 set -gx _JAVA_AWT_WM_NONREPARENTING 1
 set -gx QT_QPA_PLATFORM xcb
 
-set -gx ELECTRON_OZONE_PLATFORM_HINT wayland 
+set -gx ELECTRON_OZONE_PLATFORM_HINT wayland
 set -gx WLR_RENDERER vulkan
 set -gx WLR_DRM_NO_ATOMIC 1
 
@@ -70,23 +65,23 @@ alias 1="1password"
 
 alias cat="bat"
 
-alias dots="git --git-dir=$HOME/.dotfiles --work-tree=$HOME/.config" 
+alias dots="git --git-dir=$HOME/.dotfiles --work-tree=$HOME/.config"
 
 ### EXPORT ###
 # set -gx LC_ALL "C"
 set -gx LC_ALL "en_US.UTF-8"
-set -gx FONTCONFIG_PATH "/etc/fonts/"
+set -gx FONTCONFIG_PATH /etc/fonts/
 # set -gx LANG "en_US.UTF-8"
 # set -gx LANGUAGE "en_US.UTF-8"
 
 set -gx RUST_BACKTRACE 1
-set fish_greeting                                 # Supresses fish's intro message
+set fish_greeting # Supresses fish's intro message
 # set TERM "xterm-256color"                         # Sets the terminal type
-set EDITOR "nvim"                 # $EDITOR use Emacs in terminal
-set -gx EDITOR "nvim"                 # $EDITOR use Emacs in terminal
-set VISUAL "nvim"              # $VISUAL use Emacs in GUI mode
-set -gx VISUAL "nvim"              # $VISUAL use Emacs in GUI mode
-set -gx NVIM_SESSIONS "/sessions"              # $VISUAL use Emacs in GUI mode
+set EDITOR nvim # $EDITOR use Emacs in terminal
+set -gx EDITOR nvim # $EDITOR use Emacs in terminal
+set VISUAL nvim # $VISUAL use Emacs in GUI mode
+set -gx VISUAL nvim # $VISUAL use Emacs in GUI mode
+set -gx NVIM_SESSIONS /sessions # $VISUAL use Emacs in GUI mode
 
 set -gx XDG_CONFIG_DIRS "/home/ewan/.config/"
 
@@ -95,8 +90,6 @@ set -gx XDG_CONFIG_DIRS "/home/ewan/.config/"
 
 ### "bat" as manpager
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-
-
 
 function share
     curl -F "file=@$argv" https://0x0.st | wl-copy
@@ -112,14 +105,14 @@ fish_vi_key_bindings
 fish_user_key_bindings
 
 if status is-interactive
-  # I'm trying to grow a neckbeard
-  fish_vi_key_bindings
-  # Set the cursor shapes for the different vi modes.
+    # I'm trying to grow a neckbeard
+    fish_vi_key_bindings
+    # Set the cursor shapes for the different vi modes.
 
-  set fish_cursor_default     block      blink
-  set fish_cursor_insert      line       blink
-  set fish_cursor_replace_one underscore blink
-  set fish_cursor_visual      block
+    set fish_cursor_default block blink
+    set fish_cursor_insert line blink
+    set fish_cursor_replace_one underscore blink
+    set fish_cursor_visual block
 end
 
 ### END OF VI MODE ###fish
@@ -128,19 +121,18 @@ bind -M insert \cf '__fzf_cd --hidden'
 set -U FZF_OPEN_COMMAND "fd -H -u --type f --exclude node_modules . \$dir"
 set -U FZF_TMUX 1
 set -e FZF_COMPLETE 0
-bind -M insert \t '__fzf_complete'
+bind -M insert \t __fzf_complete
 set -U FZF_ENABLE_OPEN_PREVIEW 0
 
-bind -M insert \ed "/home/ewan/go/bin/lazydocker"
+bind -M insert \ed /home/ewan/go/bin/lazydocker
 
 bind -M insert \e. "vim ."
 bind -M insert \ee vim
-bind -M insert \er "yazi"
+bind -M insert \er yazi
 bind -M insert \e\x20 __fish_list_current_token # my preferred listing
-bind -e \el 
+bind -e \el
 bind -M insert \ea "pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 bind -M insert \ez "pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
-
 
 ### AUTOCOMPLETE AND HIGHLIGHT COLORS ###
 set fish_color_normal brcyan
@@ -151,12 +143,11 @@ set fish_color_param brcyan
 
 ### SPARK ###
 
-
 ### FUNCTIONS ###
 # Spark functions
 function letters
     cat $argv | awk -vFS='' '{for(i=1;i<=NF;i++){ if($i~/[a-zA-Z]/) { w[tolower($i)]++} } }END{for(i in w) print i,w[i]}' | sort | cut -c 3- | spark | lolcat
-    printf  '%s\n' 'abcdefghijklmnopqrstuvwxyz'  ' ' | lolcat
+    printf '%s\n' abcdefghijklmnopqrstuvwxyz ' ' | lolcat
 end
 
 function commits
@@ -165,30 +156,32 @@ end
 
 # Functions needed for !! and !$
 function __history_previous_command
-  switch (commandline -t)
-  case "!"
-    commandline -t $history[1]; commandline -f repaint
-  case "*"
-    commandline -i !
-  end
+    switch (commandline -t)
+        case "!"
+            commandline -t $history[1]
+            commandline -f repaint
+        case "*"
+            commandline -i !
+    end
 end
 
 function __history_previous_command_arguments
-  switch (commandline -t)
-  case "!"
-    commandline -t ""
-    commandline -f history-token-search-backward
-  case "*"
-    commandline -i '$'
-  end
+    switch (commandline -t)
+        case "!"
+            commandline -t ""
+            commandline -f history-token-search-backward
+        case "*"
+            commandline -i '$'
+    end
 end
 # The bindings for !! and !$
-if [ "$fish_key_bindings" = "fish_vi_key_bindings" ];
-  bind -Minsert ! __history_previous_command
-  bind -Minsert '$' __history_previous_command_arguments
+if [ "$fish_key_bindings" = fish_vi_key_bindings ]
+
+    bind -Minsert ! __history_previous_command
+    bind -Minsert '$' __history_previous_command_arguments
 else
-  bind ! __history_previous_command
-  bind '$' __history_previous_command_arguments
+    bind ! __history_previous_command
+    bind '$' __history_previous_command_arguments
 end
 
 # Function for creating a backup file
@@ -204,15 +197,13 @@ end
 function copy
     set count (count $argv | tr -d \n)
     if test "$count" = 2; and test -d "$argv[1]"
-	set from (echo $argv[1] | trim-right /)
-	set to (echo $argv[2])
+        set from (echo $argv[1] | trim-right /)
+        set to (echo $argv[2])
         command cp -r $from $to
     else
         command cp $argv
     end
 end
-
-
 
 ### ALIASES ###
 # \x1b[2J   <- clears tty
@@ -230,27 +221,27 @@ alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
 # vim and emacs
- alias vim='nvim'
+alias vim='nvim'
 
 alias code="~/VSCode-linux-x64/bin/code"
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
+alias la='exa -a --color=always --group-directories-first' # all files and dirs
+alias ll='exa -l --color=always --group-directories-first' # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
 # pacman and yay
-alias unpac='sudo pacman -Rcns'                  # update only standard pkgs
-alias pac='sudo pacman -S'                  # update only standard pkgs
-alias pacu='sudo pacman -Syu'                  # update only standard pkgs
-alias pacsyyu='sudo pacman -Syyu'                # Refresh pkglist & update standard pkgs
-alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
-alias yayu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
-alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
-alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
-alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
+alias unpac='sudo pacman -Rcns' # update only standard pkgs
+alias pac='sudo pacman -S' # update only standard pkgs
+alias pacu='sudo pacman -Syu' # update only standard pkgs
+alias pacsyyu='sudo pacman -Syyu' # Refresh pkglist & update standard pkgs
+alias yaysua='yay -Sua --noconfirm' # update only AUR pkgs (yay)
+alias yayu='yay -Syu --noconfirm' # update standard pkgs and AUR pkgs (yay)
+alias parsua='paru -Sua --noconfirm' # update only AUR pkgs (paru)
+alias parsyu='paru -Syu --noconfirm' # update standard pkgs and AUR pkgs (paru)
+alias unlock='sudo rm /var/lib/pacman/db.lck' # remove pacman lock
 alias cleanup='sudo pacman -Rns (pacman -Qtdq)' # remove orphaned packages
 alias pacl="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias pacr="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
@@ -274,8 +265,8 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # adding flags
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
+alias df='df -h' # human-readable sizes
+alias free='free -m' # show sizes in MB
 
 # ps
 alias psa="ps auxf"
@@ -306,14 +297,10 @@ alias jctl="journalctl -p 3 -xb"
 # the terminal rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
-
 # vpn
-alias grimaldev='sudo openvpn --config /etc/openvpn/client/ewan_grimaldev.ovpn'
-alias vpn_maison='nmcli connection down "tun0" ; sudo openvpn --config /etc/openvpn/client/ewan_grimely.ovpn'
+# alias grimaldev='sudo openvpn --config /etc/openvpn/client/ewan_grimaldev.ovpn'
+alias vpn_maison='sudo openvpn --config /etc/openvpn/client/ewan_grimely.ovpn'
 # alias grimaldev='sudo openvpn --config /etc/openvpn/client/grimaldev.ovpn'
-
-
-
 
 alias ff='fastfetch'
 ### RANDOM COLOR SCRIPT ###
@@ -324,7 +311,6 @@ alias ff='fastfetch'
 zoxide init fish | source
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
-
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
