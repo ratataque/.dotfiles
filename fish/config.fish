@@ -27,6 +27,7 @@ set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
 set -gx QT_QPA_PLATFORM wayland
+set -gx QT_QPA_PLATFORMTHEME hyprqt6engine
 set -gx XDG_CONFIG_HOME ~/.config
 set -gx GTK_THEME Adwaita-dark
 
@@ -47,7 +48,6 @@ set -gx GTK_USE_PORTAL 1 # Force GTK apps to use XDG portals
 set -gx GDK_BACKEND wayland
 
 set -gx _JAVA_AWT_WM_NONREPARENTING 1
-set -gx QT_QPA_PLATFORM xcb
 
 set -gx ELECTRON_OZONE_PLATFORM_HINT wayland
 set -gx WLR_RENDERER vulkan

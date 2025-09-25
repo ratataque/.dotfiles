@@ -1,5 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
+    - /home/ewan/projets/Harvest-Hub
+    - /home/ewan/projets/terra_cloud/sample-app-master
     - /home/ewan/projets/dokploy
     - /home/ewan/.config/nvim
     - /home/ewan/projets/esp8266-ch340g-flasher
@@ -14,7 +16,6 @@ recentrepos:
     - /home/ewan/keyboard/zmk-config
     - /home/ewan/projets/T-DEV-701-Devops
     - /home/ewan/projets/T-DEV-701-Devops-bootstrap
-    - /home/ewan/projets/Harvest-Hub
     - /home/ewan/projets/fraise
     - /home/ewan/neovim_config
     - /home/ewan/keyboard/Adv360-Pro-ZMK
@@ -34,7 +35,7 @@ recentrepos:
     - /home/ewan/projets/projet_igniter
 startuppopupversion: 5
 didshowhunkstaginghint: false
-lastversion: 0.54.2
+lastversion: 0.55.1
 customcommandshistory:
     - git config pull.rebase false
     - git rm --cached `git ls-files -i -c --exclude-from=.gitignore`

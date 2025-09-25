@@ -82,17 +82,7 @@ function vpn
     echo "⏹️  Press Ctrl+C to disconnect"
     echo "────────────────────────────────────────"
 
-    # Create temporary credential file
-    # set -l temp_creds (mktemp)
-    # echo -e "$USERNAME\n$PASSWORD" >$temp_creds
-
-    # Ensure temp file is cleaned up
-    # trap "rm -f $temp_creds" EXIT
-
     # Connect to VPN
-    # sudo openvpn --config "$config_file" --auth-user-pass "$temp_creds"
     sudo bash -c "openvpn --config '$config_file' --auth-user-pass <(printf '%s\n%s\n' '$USERNAME' '$PASSWORD')"
 
-    # Clean up
-    # rm -f "$temp_creds"
 end

@@ -6,13 +6,13 @@ function list_binaries_help
     end
 end
 
-function fuzzy_search_help
+function search_binaries
     set -l search_term (string join ' ' (string split ' ' $argv))
     set -l help_texts (list_binaries_help)
     set -l matches (echo $help_texts | rg -i "$search_term" | awk '{print $1}' | sort -u)
-    
+
     echo "Matches:"
     echo $matches
 end
 
-fuzzy_search_help "a"
+# fuzzy_search_help "a"
