@@ -5,6 +5,13 @@ modmap:
 
       Alt_R: Esc # for Ctrl+Click
 
+      # BRIGHTNESSDOWN: F2
+      # BRIGHTNESSUP: F1
+
+      # MUTE: F3
+      # VOLUMEDOWN: F4
+      # VOLUMEUP: F5
+
 keymap:
   - name: all
     remap:
@@ -62,7 +69,7 @@ keymap:
 
   - name: discord
     application:
-      only: [discord, vesktop]
+      only: [discord, vesktop, equibop]
     remap:
       C-dot: C-k
       C-w: C-backspace
@@ -95,7 +102,7 @@ keymap:
     application:
       only: [chromium, firefox]
     remap:
-      C-dot: C-k
+      # C-dot: C-k
       C-w: C-backspace
       C-h: backspace
       # C-m: enter
@@ -122,6 +129,12 @@ keymap:
       M-l: C-Tab
 
       Alt_L: M
+
+  - name: chromium
+    application:
+      only: chromium
+    remap:
+      C-dot: C-k
 
   - name: wofi
     application:

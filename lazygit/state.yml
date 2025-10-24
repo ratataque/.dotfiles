@@ -1,16 +1,24 @@
 lastupdatecheck: 0
 recentrepos:
+    - /home/ewan/.config/quickshell/caelestia
+    - /home/ewan/dots-hyprland
     - /home/ewan/projets/Harvest-Hub
-    - /home/ewan/projets/terra_cloud/sample-app-master
-    - /home/ewan/projets/dokploy
+    - /home/ewan/projets/dashboard-grimmely
     - /home/ewan/.config/nvim
+    - /home/ewan/projets/clario/clario-copro
+    - /home/ewan/projets/clario/core-api
+    - /home/ewan/projets/coding_dojo/movie-rental-typescript
+    - /home/ewan/projets/terra_cloud
+    - /home/ewan/.local/share/nvim/lazy/NvChad
+    - /home/ewan/projets/trinity
+    - /home/ewan/projets/Astro_droid
+    - /home/ewan/projets/dokploy
     - /home/ewan/projets/esp8266-ch340g-flasher
     - /home/ewan/projets/TNSA810/machine-3/backend-prod
     - /home/ewan/projets/TNSA810/machine-1/flatfile/m1
     - /home/ewan/projets/rust-corne-firmware
     - /home/ewan/projets/time_manager
     - /home/ewan/projets/epitech-strasbourg-jam-05-2025
-    - /home/ewan/projets/T-DEV-703-Mobile
     - /home/ewan/projets/T-DEV-702-Api
     - /home/ewan/projets/advent_of_code_24
     - /home/ewan/keyboard/zmk-config
@@ -19,7 +27,6 @@ recentrepos:
     - /home/ewan/projets/fraise
     - /home/ewan/neovim_config
     - /home/ewan/keyboard/Adv360-Pro-ZMK
-    - /home/ewan/projets/Astro_droid
     - /home/ewan/projets/rulette_rousse
     - /home/ewan/projets/advent_of_code_23
     - /home/ewan/projets/cerveur
@@ -34,7 +41,7 @@ recentrepos:
     - /home/ewan/projets/todolist
     - /home/ewan/projets/projet_igniter
 startuppopupversion: 5
-didshowhunkstaginghint: false
+didshowhunkstaginghint: true
 lastversion: 0.55.1
 customcommandshistory:
     - git config pull.rebase false

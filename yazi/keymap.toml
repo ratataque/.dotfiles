@@ -65,3 +65,9 @@ desc = "Share file"
 on = [ "s" ]
 run = "plugin fzf"
 desc = "Fuzzy search in current file"
+
+[[mgr.prepend_keymap]]
+on = "<C-i>"
+run = 'shell -- dragon-drop -x -i -T "$@"'
+desc = "drag and drop"
+

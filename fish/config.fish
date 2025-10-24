@@ -27,7 +27,8 @@ set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
 set -gx QT_QPA_PLATFORM wayland
-set -gx QT_QPA_PLATFORMTHEME hyprqt6engine
+set -gx QT_QPA_PLATFORMTHEME qt6ct
+
 set -gx XDG_CONFIG_HOME ~/.config
 set -gx GTK_THEME Adwaita-dark
 
@@ -298,15 +299,21 @@ alias jctl="journalctl -p 3 -xb"
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 # vpn
-# alias grimaldev='sudo openvpn --config /etc/openvpn/client/ewan_grimaldev.ovpn'
-alias vpn_maison='sudo openvpn --config /etc/openvpn/client/ewan_grimely.ovpn'
-# alias grimaldev='sudo openvpn --config /etc/openvpn/client/grimaldev.ovpn'
+alias grimaldev='sudo openvpn --config /etc/openvpn/client/ewan_grimaldev.ovpn'
+alias vpn_maison='sudo openvpn --config /etc/openvpn/client/ewan_grimmely.ovpn'
+# alias grimaldev='sudo openvpn --config /etc/openvpn/client/grimaldev_grimaldev.ovpn'
 
-alias ff='fastfetch'
+alias ff='pokeget random --hide-name | fastfetch --file-raw -'
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
 # Or install it from the Arch User Repository: shell-color-scripts
 # colorscript random
+
+# Only run fastfetch in new tmux sessions
+if set -q TMUX; and not set -q FASTFETCH_RAN; and set -q TMUX_PANE
+    set -gx FASTFETCH_RAN 1
+    ff
+end
 
 zoxide init fish | source
 ### SETTING THE STARSHIP PROMPT ###
