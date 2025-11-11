@@ -1,0 +1,22 @@
+[default_session]
+startup_command = "nvim"
+
+[[session]]
+name = "Home 🏡"
+path = "~"
+startup_command = "test"
+
+[[session]]
+name = "ssh server"
+path = "/"
+startup_command = "ssh server"
+
+[[session]]
+name = "screen record"
+path = "/home/ewan/GIF/"
+startup_command = "wf-recorder"
+
+[[session]]
+name = "LeetCode"
+path = "/home/ewan/projets/leetcode/"
+startup_command = "nvim -c ':Leet'"

@@ -1,0 +1,3 @@
+[submodule "quickshell/caelestia"]
+	path = quickshell/caelestia
+	url = https://github.com/ratataque/quickshell

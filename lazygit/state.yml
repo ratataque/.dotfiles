@@ -1,14 +1,15 @@
 lastupdatecheck: 0
 recentrepos:
     - /home/ewan/.config/quickshell/caelestia
-    - /home/ewan/dots-hyprland
-    - /home/ewan/projets/Harvest-Hub
-    - /home/ewan/projets/dashboard-grimmely
+    - /home/ewan/projets/terra_cloud
     - /home/ewan/.config/nvim
+    - /home/ewan/projets/Harvest-Hub/protos
+    - /home/ewan/projets/Harvest-Hub/backend-api
+    - /home/ewan/dots-hyprland
+    - /home/ewan/projets/dashboard-grimmely
     - /home/ewan/projets/clario/clario-copro
     - /home/ewan/projets/clario/core-api
     - /home/ewan/projets/coding_dojo/movie-rental-typescript
-    - /home/ewan/projets/terra_cloud
     - /home/ewan/.local/share/nvim/lazy/NvChad
     - /home/ewan/projets/trinity
     - /home/ewan/projets/Astro_droid
@@ -42,7 +43,7 @@ recentrepos:
     - /home/ewan/projets/projet_igniter
 startuppopupversion: 5
 didshowhunkstaginghint: true
-lastversion: 0.55.1
+lastversion: 0.56.0
 customcommandshistory:
     - git config pull.rebase false
     - git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
