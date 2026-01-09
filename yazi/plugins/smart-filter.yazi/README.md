@@ -7,7 +7,7 @@ https://github.com/yazi-rs/plugins/assets/17523360/72aaf117-1378-4f7e-93ba-d425a
 ## Installation
 
 ```sh
-ya pack -a yazi-rs/plugins:smart-filter
+ya pkg add yazi-rs/plugins:smart-filter
 ```
 
 ## Usage
@@ -15,13 +15,13 @@ ya pack -a yazi-rs/plugins:smart-filter
 Add this to your `~/.config/yazi/keymap.toml`:
 
 ```toml
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = "F"
 run  = "plugin smart-filter"
 desc = "Smart filter"
 ```
 
-Make sure the <kbd>F</kbd> key is not used elsewhere.
+Note that, the keybindings above are just examples, please tune them up as needed to ensure they don't conflict with your other commands/plugins.
 
 ## License
 

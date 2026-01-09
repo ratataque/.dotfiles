@@ -49,6 +49,8 @@ function vpn
             set op_item_name "VPN grimaldev - user ewan"
         case ewan_grimmely
             set op_item_name "VPN grimmely - User ewan"
+        case ewan_sh8tan
+            set op_item_name "VPN sh8tan - User ewan"
         case "*"
             # Default pattern - fail 
             echo "❌ No matching 1Password item for selected VPN config '$selected_vpn'"
@@ -59,7 +61,7 @@ function vpn
 
     # Get credentials from 1Password
     set -l USERNAME (op item get "$op_item_name" --fields username 2>/dev/null)
-    set -l PASSWORD (op item get "$op_item_name" --fields password 2>/dev/null)
+    set -l PASSWORD (op item get "$op_item_name" --fields password --reveal 2>/dev/null)
 
     if test -z "$USERNAME" -o -z "$PASSWORD"
         echo "❌ Failed to retrieve credentials from 1Password for '$op_item_name'"
@@ -69,7 +71,7 @@ function vpn
     end
 
     echo "👤 Username retrieved: $USERNAME"
-    echo "🔒 Password retrieved: [HIDDEN]"
+    echo "🔒 Password retrieved: [HIDDEN]$PASSWORD"
 
     set -l config_file "$VPN_CONFIG_DIR/$selected_vpn.ovpn"
 
@@ -83,6 +85,7 @@ function vpn
     echo "────────────────────────────────────────"
 
     # Connect to VPN
-    sudo bash -c "openvpn --config '$config_file' --auth-user-pass <(printf '%s\n%s\n' '$USERNAME' '$PASSWORD')"
+    # sudo bash -c "openvpn --config '$config_file' --auth-user-pass <(printf '%s\n%s\n' '$USERNAME' '$PASSWORD')"
+    sudo openvpn --config "$config_file" --auth-user-pass (echo -e "$USERNAME\n$PASSWORD" | psub)
 
 end

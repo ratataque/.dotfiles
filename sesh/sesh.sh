@@ -8,5 +8,5 @@ tmux attach -t "dev" \; run-shell "sesh connect \"$(
  --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list -z)' \
  --bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -t d -E .cache . / | sed "s,^$HOME,~,")' \
  --bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list)' \
- --bind 'ctrl-a:execute(mkdir -p {q})+change-prompt(⚡  )+reload(sesh list)' \
+ --bind 'ctrl-a:execute(mkdir -p {q} && zoxide add {q} && sesh connect {q})+abort' \
  )\""

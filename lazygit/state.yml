@@ -1,10 +1,18 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/ewan/.config/quickshell/caelestia
-    - /home/ewan/projets/terra_cloud
-    - /home/ewan/.config/nvim
     - /home/ewan/projets/Harvest-Hub/protos
+    - /home/ewan/.config/nvim
+    - /home/ewan/projets/T-SEC-911-STG_6
+    - /home/ewan/projets/TSEC-911
+    - /home/ewan/projets/advent_of_code_25
+    - /home/ewan/projets/station-meteo
+    - /home/ewan/projets/la-nuit-info-2025
+    - /home/ewan/projets/terra_cloud
+    - /home/ewan/projets/terra_cloud_infra
+    - /home/ewan/projets/T-LAW-901-STG_OH-MAX
     - /home/ewan/projets/Harvest-Hub/backend-api
+    - /home/ewan/projets/WOL-webview
+    - /home/ewan/.config/quickshell/caelestia
     - /home/ewan/dots-hyprland
     - /home/ewan/projets/dashboard-grimmely
     - /home/ewan/projets/clario/clario-copro
@@ -43,7 +51,7 @@ recentrepos:
     - /home/ewan/projets/projet_igniter
 startuppopupversion: 5
 didshowhunkstaginghint: true
-lastversion: 0.56.0
+lastversion: 0.58.0
 customcommandshistory:
     - git config pull.rebase false
     - git rm --cached `git ls-files -i -c --exclude-from=.gitignore`

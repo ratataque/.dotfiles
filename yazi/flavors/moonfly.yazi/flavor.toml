@@ -34,26 +34,14 @@ border_style  = { fg = "#323437" }
 
 
 # : Status {{{
-[mode]
-normal_main = { fg = "#222327", bg = "#4e9dff", bold = true }
-normal_alt  = { fg = "#4e9dff", bg = "#393939" }
-
-# Select mode
-select_main = { fg = "#222327", bg = "#6ae073", bold = true }
-select_alt  = { fg = "#6ae073", bg = "#393939" }
-
-# Unset mode
-unset_main = { fg = "#222327", bg = "#f2cdcd", bold = true }
-unset_alt  = { fg = "#f2cdcd", bg = "#393939" }
-
 
 [status]
-separator_open  = ""
-separator_close = ""
+separator_open  = ""
+separator_close = ""
 separator_style = { fg = "#323437", bg = "#323437" }
 
 # Mode
-mode_normal = { fg = "#080808", bg = "#89999f", bold = true }
+mode_normal = { fg = "#080808", bg = "#80a0ff", bold = true }
 mode_select = { fg = "#080808", bg = "#e3c78a", bold = true }
 mode_unset  = { fg = "#080808", bg = "#ff5454", bold = true }
 

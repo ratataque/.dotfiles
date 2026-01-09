@@ -1,4 +1,7 @@
 # yazi.toml
+# [flavor]
+# use = "moonfly"
+
 [mgr]
 show_hidden = true
 

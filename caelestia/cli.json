@@ -15,14 +15,24 @@
   "toggles": {
     "communication": {
       "discord": {
-        "enable": true,
+        "enable": false,
         "match": [{ "class": "discord" }],
         "command": ["discord"],
         "move": true
       },
       "whatsapp": {
-        "enable": true,
+        "enable": false,
         "match": [{ "class": "whatsapp" }],
+        "move": true
+      },
+      "equibop": {
+        "enable": true,
+        "match": [
+          {
+            "class": "equibop"
+          }
+        ],
+        "command": ["equibop"],
         "move": true
       }
     },
@@ -68,9 +78,13 @@
     "todo": {
       "todoist": {
         "enable": true,
-        "match": [{ "class": "Todoist" }],
-        "command": ["todoist"],
-        "move": true
+        "match": [
+          {
+            "class": "kitty",
+            "workspace": { "name": "special:todo" }
+          }
+        ],
+        "command": ["kitty"]
       }
     }
   }

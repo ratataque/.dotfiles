@@ -77,7 +77,7 @@ set -gx FONTCONFIG_PATH /etc/fonts/
 
 set -gx RUST_BACKTRACE 1
 set fish_greeting # Supresses fish's intro message
-# set TERM "xterm-256color"                         # Sets the terminal type
+set TERM xterm-256color # Sets the terminal type
 set EDITOR nvim # $EDITOR use Emacs in terminal
 set -gx EDITOR nvim # $EDITOR use Emacs in terminal
 set VISUAL nvim # $VISUAL use Emacs in GUI mode
@@ -214,6 +214,8 @@ end
 # root privileges
 alias doas="doas --"
 
+alias sc="sesh connect"
+
 # navigation
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -301,6 +303,7 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 # vpn
 alias grimaldev='sudo openvpn --config /etc/openvpn/client/ewan_grimaldev.ovpn'
 alias vpn_maison='sudo openvpn --config /etc/openvpn/client/ewan_grimmely.ovpn'
+# alias vpn_sh8tan='sudo openvpn --config /etc/openvpn/client/ewan_grimmely.ovpn'
 # alias grimaldev='sudo openvpn --config /etc/openvpn/client/grimaldev_grimaldev.ovpn'
 
 alias ff='pokeget random --hide-name | fastfetch --file-raw -'
