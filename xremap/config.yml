@@ -138,7 +138,7 @@ keymap:
 
   - name: wofi
     application:
-      only: wofi
+      only: [wofi, fuzzel]
     remap:
       C-w: C-backspace
       C-h: backspace

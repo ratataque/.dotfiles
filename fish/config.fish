@@ -26,6 +26,9 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
+# IA
+set -gx CLAUDE_PACAGE_MANAGER bun
+
 set -gx QT_QPA_PLATFORM wayland
 set -gx QT_QPA_PLATFORMTHEME qt6ct
 
@@ -125,7 +128,7 @@ set -e FZF_COMPLETE 0
 bind -M insert \t __fzf_complete
 set -U FZF_ENABLE_OPEN_PREVIEW 0
 
-bind -M insert \ed /home/ewan/go/bin/lazydocker
+bind -M insert \ed lazydocker
 
 bind -M insert \e. "vim ."
 bind -M insert \ee vim
@@ -210,6 +213,8 @@ end
 # \x1b[2J   <- clears tty
 # \x1b[1;1H <- goes to (1, 1) (start)
 # alias clear='echo -en "\x1b[2J\x1b[1;1H" ; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
+
+alias oc="opencode"
 
 # root privileges
 alias doas="doas --"
@@ -325,3 +330,6 @@ starship init fish | source
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# opencode
+fish_add_path /home/ewan/.opencode/bin

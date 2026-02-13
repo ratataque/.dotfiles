@@ -18,4 +18,4 @@ SETUVAR _fisher_jethrokuan_2F_fzf_files:\x7e/\x2econfig/fish/functions/__fzf_cd\
 SETUVAR _fisher_plugins:jethrokuan/fzf\x1ebarnybug/docker\x2dfish\x2dcompletion
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR edit_command_buffer:vim
-SETUVAR fish_user_paths:/home/ewan/\x2etmuxifier/bin\x1e/home/ewan/\x2elocal/bin\x1e/home/ewan/Applications
+SETUVAR fish_user_paths:/home/ewan/\x2eopencode/bin\x1e/home/ewan/\x2etmuxifier/bin\x1e/home/ewan/\x2elocal/bin\x1e/home/ewan/Applications

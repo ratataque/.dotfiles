@@ -1,91 +1,101 @@
 {
-  "record": {
-    "extraArgs": []
-  },
-  "theme": {
-    "enableTerm": true,
-    "enableHypr": true,
-    "enableDiscord": true,
-    "enableSpicetify": false,
-    "enableFuzzel": true,
-    "enableBtop": true,
-    "enableGtk": true,
-    "enableQt": true
-  },
-  "toggles": {
-    "communication": {
-      "discord": {
-        "enable": false,
-        "match": [{ "class": "discord" }],
-        "command": ["discord"],
-        "move": true
-      },
-      "whatsapp": {
-        "enable": false,
-        "match": [{ "class": "whatsapp" }],
-        "move": true
-      },
-      "equibop": {
-        "enable": true,
-        "match": [
-          {
-            "class": "equibop"
-          }
-        ],
-        "command": ["equibop"],
-        "move": true
-      }
+    "record": {
+        "extraArgs": []
     },
-    "music": {
-      "spotify": {
-        "enable": true,
-        "match": [
-          { "class": "Spotify" },
-          { "initialTitle": "Spotify" },
-          { "initialTitle": "Spotify Free" }
-        ],
-        "command": ["spicetify", "watch", "-s"],
-        "move": true
-      },
-      "feishin": {
-        "enable": true,
-        "match": [{ "class": "feishin" }],
-        "move": true
-      }
+    "theme": {
+        "enableTerm": true,
+        "enableHypr": true,
+        "enableDiscord": true,
+        "enableSpicetify": false,
+        "enableFuzzel": true,
+        "enableBtop": true,
+        "enableGtk": true,
+        "enableQt": true
     },
-    "sysmon": {
-      "btop": {
-        "enable": true,
-        "match": [
-          {
-            "class": "btop",
-            "title": "btop",
-            "workspace": { "name": "special:sysmon" }
-          }
-        ],
-        "command": [
-          "foot",
-          "-a",
-          "btop",
-          "-T",
-          "btop",
-          "fish",
-          "-C",
-          "exec btop"
-        ]
-      }
-    },
-    "todo": {
-      "todoist": {
-        "enable": true,
-        "match": [
-          {
-            "class": "kitty",
-            "workspace": { "name": "special:todo" }
-          }
-        ],
-        "command": ["kitty"]
-      }
+    "toggles": {
+        "communication": {
+            "discord": {
+                "enable": false,
+                "match": [{ "class": "discord" }],
+                "command": ["discord"],
+                "move": true
+            },
+            "whatsapp": {
+                "enable": false,
+                "match": [{ "class": "whatsapp" }],
+                "move": true
+            },
+            "equibop": {
+                "enable": true,
+                "match": [
+                    {
+                        "class": "equibop"
+                    }
+                ],
+                "command": ["equibop"],
+                "move": true
+            },
+            "vesktop": {
+                "enable": true,
+                "match": [
+                    {
+                        "class": "vesktop"
+                    }
+                ],
+                "command": ["vesktop"],
+                "move": true
+            }
+        },
+        "music": {
+            "spotify": {
+                "enable": true,
+                "match": [
+                    { "class": "Spotify" },
+                    { "initialTitle": "Spotify" },
+                    { "initialTitle": "Spotify Free" }
+                ],
+                "command": ["spicetify", "watch", "-s"],
+                "move": true
+            },
+            "feishin": {
+                "enable": true,
+                "match": [{ "class": "feishin" }],
+                "move": true
+            }
+        },
+        "sysmon": {
+            "btop": {
+                "enable": true,
+                "match": [
+                    {
+                        "class": "btop",
+                        "title": "btop",
+                        "workspace": { "name": "special:sysmon" }
+                    }
+                ],
+                "command": [
+                    "foot",
+                    "-a",
+                    "btop",
+                    "-T",
+                    "btop",
+                    "fish",
+                    "-C",
+                    "exec btop"
+                ]
+            }
+        },
+        "todo": {
+            "todoist": {
+                "enable": true,
+                "match": [
+                    {
+                        "class": "kitty",
+                        "workspace": { "name": "special:todo" }
+                    }
+                ],
+                "command": ["kitty"]
+            }
+        }
     }
-  }
 }

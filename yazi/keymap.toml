@@ -86,3 +86,12 @@ on = "<C-i>"
 run = 'shell -- dragon-drop -x -i -T "$@"'
 desc = "drag and drop"
 
+[[mgr.prepend_keymap]]
+on = "<C-p>"
+run = [ "sort mtime --reverse", "arrow top" ]
+desc = "Go to newest folder"
+
+[[mgr.prepend_keymap]]
+on = "<C-n>"
+run  = [ "sort mtime --reverse=no", "arrow bot" ]
+desc = "Jump to newest file"

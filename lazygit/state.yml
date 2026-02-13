@@ -1,19 +1,24 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/ewan/projets/Harvest-Hub/protos
+    - /home/ewan/projets/kwerty
+    - /home/ewan/projets/bare
     - /home/ewan/.config/nvim
-    - /home/ewan/projets/T-SEC-911-STG_6
+    - /home/ewan/projets/Harvest-Hub/mobile-app
+    - /home/ewan/projets/Harvest-Hub/backend-api
     - /home/ewan/projets/TSEC-911
+    - /home/ewan/projets/dokploy
+    - /home/ewan/keyboard/Adv360-Pro-ZMK
+    - /home/ewan/keyboard/zmk-config
+    - /home/ewan/projets/Harvest-Hub/protos
+    - /home/ewan/projets/T-SEC-911-STG_6
     - /home/ewan/projets/advent_of_code_25
     - /home/ewan/projets/station-meteo
     - /home/ewan/projets/la-nuit-info-2025
     - /home/ewan/projets/terra_cloud
     - /home/ewan/projets/terra_cloud_infra
     - /home/ewan/projets/T-LAW-901-STG_OH-MAX
-    - /home/ewan/projets/Harvest-Hub/backend-api
     - /home/ewan/projets/WOL-webview
     - /home/ewan/.config/quickshell/caelestia
-    - /home/ewan/dots-hyprland
     - /home/ewan/projets/dashboard-grimmely
     - /home/ewan/projets/clario/clario-copro
     - /home/ewan/projets/clario/core-api
@@ -21,7 +26,6 @@ recentrepos:
     - /home/ewan/.local/share/nvim/lazy/NvChad
     - /home/ewan/projets/trinity
     - /home/ewan/projets/Astro_droid
-    - /home/ewan/projets/dokploy
     - /home/ewan/projets/esp8266-ch340g-flasher
     - /home/ewan/projets/TNSA810/machine-3/backend-prod
     - /home/ewan/projets/TNSA810/machine-1/flatfile/m1
@@ -30,19 +34,15 @@ recentrepos:
     - /home/ewan/projets/epitech-strasbourg-jam-05-2025
     - /home/ewan/projets/T-DEV-702-Api
     - /home/ewan/projets/advent_of_code_24
-    - /home/ewan/keyboard/zmk-config
     - /home/ewan/projets/T-DEV-701-Devops
     - /home/ewan/projets/T-DEV-701-Devops-bootstrap
     - /home/ewan/projets/fraise
-    - /home/ewan/neovim_config
-    - /home/ewan/keyboard/Adv360-Pro-ZMK
     - /home/ewan/projets/rulette_rousse
     - /home/ewan/projets/advent_of_code_23
     - /home/ewan/projets/cerveur
     - /home/ewan/projets/resources_relationnelles
     - /home/ewan/projets/intranet_wgf
     - /home/ewan/projets/AppDigitalisation
-    - /home/ewan/dotfiles
     - /home/ewan/.config/ranger/plugins/ranger_devicons
     - /home/ewan/projets/Mobil-test
     - /home/ewan/projets/home
@@ -51,10 +51,11 @@ recentrepos:
     - /home/ewan/projets/projet_igniter
 startuppopupversion: 5
 didshowhunkstaginghint: true
-lastversion: 0.58.0
+lastversion: 0.59.0
 customcommandshistory:
-    - git config pull.rebase false
+    - git rm --cached aes_key.txt
     - git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
+    - git config pull.rebase false
     - git config pull.rebase true
     - git remote add origin https://github.com/ratataque/neovim_config
     - git remote rm origin
