@@ -15,7 +15,7 @@
     "toggles": {
         "communication": {
             "discord": {
-                "enable": false,
+                "enable": true,
                 "match": [{ "class": "discord" }],
                 "command": ["discord"],
                 "move": true
@@ -36,7 +36,7 @@
                 "move": true
             },
             "vesktop": {
-                "enable": true,
+                "enable": false,
                 "match": [
                     {
                         "class": "vesktop"

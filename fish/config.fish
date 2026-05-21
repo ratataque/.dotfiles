@@ -41,10 +41,13 @@ set -gx LIBCLANG_PATH "/home/ewan/.rustup/toolchains/esp/xtensa-esp32-elf-clang/
 set -gx PATH "/home/ewan/.rustup/toolchains/esp/xtensa-esp-elf/esp-14.2.0_20240906/xtensa-esp-elf/bin:$PATH"
 
 # set -gx ANDROID_HOME ~/.config/.android
-set -gx ANDROID_HOME ~/Android
-set -gx ANDROID_SDK_ROOT ~/Android/Sdk
+set -gx ANDROID_HOME /opt/android-sdk
+set -gx PATH $PATH:$ANDROID_HOME/tools
+set -gx PATH $PATH:$ANDROID_HOME/platform-tools
+# set -gx ANDROID_HOME ~/Android
+# set -gx ANDROID_SDK_ROOT ~/Android/Sdk
 # set -gx ANDROID_SDK_ROOT $ANDROID_HOME
-set -gx ANDROID_AVD_HOME ~/.config/.android/avd
+# set -gx ANDROID_AVD_HOME ~/.config/.android/avd
 # set -gx PATH $PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools
 # set -gx PATH $PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools
 

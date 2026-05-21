@@ -1,25 +1,29 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/ewan/projets/kwerty
-    - /home/ewan/projets/bare
-    - /home/ewan/.config/nvim
-    - /home/ewan/projets/Harvest-Hub/mobile-app
     - /home/ewan/projets/Harvest-Hub/backend-api
-    - /home/ewan/projets/TSEC-911
+    - /home/ewan/projets/Harvest-Hub/mobile-app
+    - /home/ewan/projets/Harvest-Hub/protos
+    - /home/ewan/projets/Harvest-Hub/probe-core
+    - /home/ewan/projets/Harvest-Hub/hub-core
+    - /home/ewan/.config/quickshell/caelestia
+    - /home/ewan/projets/Harvest-Hub/T-ESP-902-96908-STG_OH-MAX
+    - /home/ewan/.config/nvim
+    - /home/ewan/projets/epitech-logo
+    - /home/ewan/projets/kwerty
+    - /home/ewan/projets/dashboard-grimmely
+    - /home/ewan/projets/WOL-webview
     - /home/ewan/projets/dokploy
+    - /home/ewan/projets/clash_of_agents
+    - /home/ewan/projets/Projet_virology
+    - /home/ewan/projets/bare
     - /home/ewan/keyboard/Adv360-Pro-ZMK
     - /home/ewan/keyboard/zmk-config
-    - /home/ewan/projets/Harvest-Hub/protos
-    - /home/ewan/projets/T-SEC-911-STG_6
     - /home/ewan/projets/advent_of_code_25
     - /home/ewan/projets/station-meteo
     - /home/ewan/projets/la-nuit-info-2025
     - /home/ewan/projets/terra_cloud
     - /home/ewan/projets/terra_cloud_infra
     - /home/ewan/projets/T-LAW-901-STG_OH-MAX
-    - /home/ewan/projets/WOL-webview
-    - /home/ewan/.config/quickshell/caelestia
-    - /home/ewan/projets/dashboard-grimmely
     - /home/ewan/projets/clario/clario-copro
     - /home/ewan/projets/clario/core-api
     - /home/ewan/projets/coding_dojo/movie-rental-typescript
@@ -51,11 +55,12 @@ recentrepos:
     - /home/ewan/projets/projet_igniter
 startuppopupversion: 5
 didshowhunkstaginghint: true
-lastversion: 0.59.0
+lastversion: 0.61.1
 customcommandshistory:
+    - git config pull.rebase false
+    - git push origin --tags
     - git rm --cached aes_key.txt
     - git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
-    - git config pull.rebase false
     - git config pull.rebase true
     - git remote add origin https://github.com/ratataque/neovim_config
     - git remote rm origin
@@ -72,3 +77,169 @@ customcommandshistory:
     - git pull main
     - git pull origin master --allow-unrelated-histories
 hidecommandlog: false
+githubPullRequests:
+    /home/ewan/.config/nvim: []
+    /home/ewan/.config/quickshell/caelestia:
+        - headRefName: main
+          number: 1451
+          title: Use `duf` instead of `lsblk` for simpler and more accurate disk usage calculation
+          state: OPEN
+          url: https://github.com/caelestia-dots/shell/pull/1451
+          headRepositoryOwner: mastermach50
+        - headRefName: main
+          number: 1432
+          title: Add displays card to utilities drawer
+          state: OPEN
+          url: https://github.com/caelestia-dots/shell/pull/1432
+          headRepositoryOwner: salah-chafai
+        - headRefName: main
+          number: 1414
+          title: 'ci: add a stable banch that tracks the latest release'
+          state: MERGED
+          url: https://github.com/caelestia-dots/shell/pull/1414
+          headRepositoryOwner: zepi2509
+        - headRefName: main
+          number: 1407
+          title: 'feat: wallpaper gif support'
+          state: CLOSED
+          url: https://github.com/caelestia-dots/shell/pull/1407
+          headRepositoryOwner: ciroenrique4-eng
+        - headRefName: main
+          number: 1367
+          title: 'Revert "feat: v2.0.0"'
+          state: CLOSED
+          url: https://github.com/caelestia-dots/shell/pull/1367
+          headRepositoryOwner: elkcloner-coder
+        - headRefName: main
+          number: 1451
+          title: Use `duf` instead of `lsblk` for simpler and more accurate disk usage calculation
+          state: OPEN
+          url: https://github.com/caelestia-dots/shell/pull/1451
+          headRepositoryOwner: mastermach50
+        - headRefName: main
+          number: 1432
+          title: Add displays card to utilities drawer
+          state: OPEN
+          url: https://github.com/caelestia-dots/shell/pull/1432
+          headRepositoryOwner: salah-chafai
+        - headRefName: main
+          number: 1414
+          title: 'ci: add a stable banch that tracks the latest release'
+          state: MERGED
+          url: https://github.com/caelestia-dots/shell/pull/1414
+          headRepositoryOwner: zepi2509
+        - headRefName: main
+          number: 1407
+          title: 'feat: wallpaper gif support'
+          state: CLOSED
+          url: https://github.com/caelestia-dots/shell/pull/1407
+          headRepositoryOwner: ciroenrique4-eng
+        - headRefName: main
+          number: 1367
+          title: 'Revert "feat: v2.0.0"'
+          state: CLOSED
+          url: https://github.com/caelestia-dots/shell/pull/1367
+          headRepositoryOwner: elkcloner-coder
+        - headRefName: bar-custom-entries
+          number: 1453
+          title: 'bar: add custom entries'
+          state: OPEN
+          url: https://github.com/caelestia-dots/shell/pull/1453
+          headRepositoryOwner: ratataque
+    /home/ewan/projets/Harvest-Hub/T-ESP-902-96908-STG_OH-MAX: []
+    /home/ewan/projets/Harvest-Hub/backend-api:
+        - headRefName: feat/auth-v2-and-cleanup
+          number: 2
+          title: 'feat: migrate to auth/v2 + garden/v2 with QR-code hub provisioning'
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/backend-api/pull/2
+          headRepositoryOwner: harvesthub-gardening-tool
+        - headRefName: feature/auth
+          number: 1
+          title: feature - added jwt auth - 64
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/backend-api/pull/1
+          headRepositoryOwner: harvesthub-gardening-tool
+        - headRefName: feature/probe-five-metrics
+          number: 3
+          title: update garden metric ingestion
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/backend-api/pull/3
+          headRepositoryOwner: harvesthub-gardening-tool
+    /home/ewan/projets/Harvest-Hub/hub-core:
+        - headRefName: feat/auth-v2-migration
+          number: 10
+          title: read five probe metrics
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/hub-core/pull/10
+          headRepositoryOwner: harvesthub-gardening-tool
+        - headRefName: feat/auth-v2-migration
+          number: 9
+          title: feature - migrate to auth v2 claim once hub provisioning - quick
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/hub-core/pull/9
+          headRepositoryOwner: harvesthub-gardening-tool
+    /home/ewan/projets/Harvest-Hub/mobile-app:
+        - headRefName: feature/stat_profil
+          number: 2
+          title: feature - page stats, page profile et bottommenu - 39 & 40
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/mobile-app/pull/2
+          headRepositoryOwner: harvesthub-gardening-tool
+        - headRefName: feature/testunitaire
+          number: 6
+          title: feature - test unitaire - quick
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/mobile-app/pull/6
+          headRepositoryOwner: harvesthub-gardening-tool
+        - headRefName: fix/ui
+          number: 4
+          title: feature - single sonde model UI cleanup and fixes - 62
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/mobile-app/pull/4
+          headRepositoryOwner: harvesthub-gardening-tool
+        - headRefName: feature/home
+          number: 3
+          title: feature - page jardin UI avec la carte - 62
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/mobile-app/pull/3
+          headRepositoryOwner: harvesthub-gardening-tool
+    /home/ewan/projets/Harvest-Hub/probe-core:
+        - headRefName: baptiste/feature/migration-to-stm32wb55cgu6
+          number: 6
+          title: feature - migration stm32 - quick
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/probe-core/pull/6
+          headRepositoryOwner: harvesthub-gardening-tool
+    /home/ewan/projets/Harvest-Hub/protos:
+        - headRefName: chore/remove-auth-v1-add-garden-v2
+          number: 9
+          title: remove auth/v1, add garden/v2 with hub_id filter
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/protos/pull/9
+          headRepositoryOwner: harvesthub-gardening-tool
+        - headRefName: feat/auth-v2-hub-provisioning
+          number: 8
+          title: feature - auth v2 hub provisioning - quick
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/protos/pull/8
+          headRepositoryOwner: harvesthub-gardening-tool
+        - headRefName: ewan/feature/proto-rust
+          number: 6
+          title: feature - added the proto buf for the rust client - 15
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/protos/pull/6
+          headRepositoryOwner: harvesthub-gardening-tool
+        - headRefName: feature/typescript-protos
+          number: 2
+          title: feature - Add TypeScript code generation and publishing - 10
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/protos/pull/2
+          headRepositoryOwner: harvesthub-gardening-tool
+        - headRefName: feature/probe-five-metrics
+          number: 10
+          title: update garden metrics contract
+          state: MERGED
+          url: https://github.com/harvesthub-gardening-tool/protos/pull/10
+          headRepositoryOwner: harvesthub-gardening-tool
+    /home/ewan/projets/epitech-logo: []
