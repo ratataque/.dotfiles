@@ -1,5 +1,6 @@
 lastupdatecheck: 0
 recentrepos:
+    - /home/ewan/.config/nvim
     - /home/ewan/projets/kubequest
     - /home/ewan/.config/quickshell/caelestia
     - /home/ewan/.local/share/nvim/lazy/NvChad
@@ -11,7 +12,6 @@ recentrepos:
     - /home/ewan/projets/Harvest-Hub/probe-core
     - /home/ewan/projets/Harvest-Hub/hub-core
     - /home/ewan/projets/Harvest-Hub/T-ESP-902-96908-STG_OH-MAX
-    - /home/ewan/.config/nvim
     - /home/ewan/projets/epitech-logo
     - /home/ewan/projets/kwerty
     - /home/ewan/projets/dashboard-grimmely
