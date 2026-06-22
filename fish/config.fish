@@ -26,6 +26,8 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
+set -x CAELESTIA_LIB_DIR ~~/.config/quickshell/caelestia/
+
 # IA
 set -gx CLAUDE_PACAGE_MANAGER bun
 
@@ -96,7 +98,8 @@ set -gx XDG_CONFIG_DIRS "/home/ewan/.config/"
 ### Uncomment only one of these!
 
 ### "bat" as manpager
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+# set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -x MANPAGER "less -R"
 
 function share
     curl -F "file=@$argv" https://0x0.st | wl-copy

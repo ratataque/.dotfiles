@@ -18,7 +18,7 @@ cwd = { fg = "#00d1e9" }
 # Tab
 tab_active   = { reversed = true }
 tab_inactive = {}
-tab_width    = 1
+# tab_width    = 1
 
 
 # Count
