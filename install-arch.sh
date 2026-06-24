@@ -10,6 +10,7 @@ mkdir -p "${LOG_DIR}"
 
 PACMAN_PACKAGES=(
     git
+    github-cli
     base-devel
     rsync
     curl
