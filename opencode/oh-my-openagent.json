@@ -1,0 +1,80 @@
+{
+    "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+    "agents": {
+        "sisyphus": {
+            "model": "github-copilot/claude-opus-4.6",
+            "variant": "high"
+        },
+        "hephaestus": {
+            "model": "github-copilot/gpt-5.3-codex",
+            "variant": "xhigh"
+        },
+        "oracle": {
+            "model": "github-copilot/gpt-5.3-codex",
+            "variant": "high"
+        },
+        "librarian": {
+            "model": "github-copilot/gpt-5.4"
+        },
+        "explore": {
+            "model": "github-copilot/gpt-5-mini"
+        },
+        "multimodal-looker": {
+            "model": "github-copilot/gemini-3-flash-preview"
+        },
+        "prometheus": {
+            "model": "github-copilot/claude-opus-4.6",
+            "variant": "high"
+        },
+        "metis": {
+            "model": "github-copilot/gpt-5.4",
+            "variant": "xhigh"
+        },
+        "momus": {
+            "model": "github-copilot/gpt-5.5",
+            "variant": "xhigh"
+        },
+        "atlas": {
+            "model": "github-copilot/gpt-5.5",
+            "variant": "xhigh"
+        }
+    },
+    "categories": {
+        "visual-engineering": {
+            "model": "github-copilot/gemini-3-pro-preview",
+            "variant": "high"
+        },
+        "ultrabrain": {
+            "model": "github-copilot/gpt-5.3-codex",
+            "variant": "xhigh"
+        },
+        "deep": {
+            "model": "github-copilot/gpt-5.3-codex",
+            "variant": "medium"
+        },
+        "artistry": {
+            "model": "github-copilot/gemini-3-pro-preview",
+            "variant": "high"
+        },
+        "quick": {
+            "model": "github-copilot/claude-haiku-4.5"
+        },
+        "unspecified-low": {
+            "model": "github-copilot/claude-sonnet-4.6"
+        },
+        "unspecified-high": {
+            "model": "github-copilot/gpt-5.4"
+        },
+        "writing": {
+            "model": "github-copilot/gemini-3-flash-preview"
+        }
+    },
+    "tmux": {
+        "enabled": true,
+        "layout": "main-vertical",
+        "main_pane_size": 60,
+        "main_pane_min_width": 120,
+        "agent_pane_min_width": 40
+    },
+    "auto_update": true
+}
