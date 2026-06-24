@@ -100,7 +100,7 @@ keymap:
 
   - name: webbrowser
     application:
-      only: [chromium, firefox]
+      only: [chromium, firefox, vivaldi-stable]
     remap:
       # C-dot: C-k
       C-w: C-backspace
@@ -128,7 +128,7 @@ keymap:
       M-h: C-Shift-Tab
       M-l: C-Tab
 
-      Alt_L: M
+      # Alt_L: M
 
   - name: chromium
     application:

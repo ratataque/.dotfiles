@@ -26,11 +26,6 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
-set -x CAELESTIA_LIB_DIR ~~/.config/quickshell/caelestia/
-
-# IA
-set -gx CLAUDE_PACAGE_MANAGER bun
-
 set -gx QT_QPA_PLATFORM wayland
 set -gx QT_QPA_PLATFORMTHEME qt6ct
 
@@ -39,17 +34,12 @@ set -gx GTK_THEME Adwaita-dark
 
 set -x RUSTPATH $HOME/.cargo
 set -x PATH $PATH $RUSTPATH/bin
-set -gx LIBCLANG_PATH "/home/ewan/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-19.1.2_20250225/esp-clang/lib"
-set -gx PATH "/home/ewan/.rustup/toolchains/esp/xtensa-esp-elf/esp-14.2.0_20240906/xtensa-esp-elf/bin:$PATH"
 
 # set -gx ANDROID_HOME ~/.config/.android
-set -gx ANDROID_HOME /opt/android-sdk
-set -gx PATH $PATH:$ANDROID_HOME/tools
-set -gx PATH $PATH:$ANDROID_HOME/platform-tools
-# set -gx ANDROID_HOME ~/Android
-# set -gx ANDROID_SDK_ROOT ~/Android/Sdk
+set -gx ANDROID_HOME ~/Android
+set -gx ANDROID_SDK_ROOT ~/Android/Sdk
 # set -gx ANDROID_SDK_ROOT $ANDROID_HOME
-# set -gx ANDROID_AVD_HOME ~/.config/.android/avd
+set -gx ANDROID_AVD_HOME ~/.config/.android/avd
 # set -gx PATH $PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools
 # set -gx PATH $PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools
 
@@ -85,7 +75,7 @@ set -gx FONTCONFIG_PATH /etc/fonts/
 
 set -gx RUST_BACKTRACE 1
 set fish_greeting # Supresses fish's intro message
-set TERM xterm-256color # Sets the terminal type
+# set TERM "xterm-256color"                         # Sets the terminal type
 set EDITOR nvim # $EDITOR use Emacs in terminal
 set -gx EDITOR nvim # $EDITOR use Emacs in terminal
 set VISUAL nvim # $VISUAL use Emacs in GUI mode
@@ -98,8 +88,7 @@ set -gx XDG_CONFIG_DIRS "/home/ewan/.config/"
 ### Uncomment only one of these!
 
 ### "bat" as manpager
-# set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-set -x MANPAGER "less -R"
+set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 function share
     curl -F "file=@$argv" https://0x0.st | wl-copy
@@ -134,7 +123,7 @@ set -e FZF_COMPLETE 0
 bind -M insert \t __fzf_complete
 set -U FZF_ENABLE_OPEN_PREVIEW 0
 
-bind -M insert \ed lazydocker
+bind -M insert \ed /home/ewan/go/bin/lazydocker
 
 bind -M insert \e. "vim ."
 bind -M insert \ee vim
@@ -220,12 +209,12 @@ end
 # \x1b[1;1H <- goes to (1, 1) (start)
 # alias clear='echo -en "\x1b[2J\x1b[1;1H" ; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
 
-alias oc="opencode"
-
 # root privileges
 alias doas="doas --"
 
-alias sc="sesh connect"
+alias op="opencode"
+
+alias port="netstat -tunlp"
 
 # navigation
 alias ..='cd ..'
@@ -261,6 +250,8 @@ alias pacl="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sud
 alias pacr="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
 alias yayl="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
 alias yayr="yay -Qq | fzf --multi --preview 'yay -Qi {1}' | xargs -ro yay -Rns"
+alias parl='paru -Slq | fzf --multi --preview "paru -Si {1}" | xargs -ro sudo paru -S'
+alias parr="paru -Qq | fzf --multi --preview 'paru -Qi {1}' | xargs -ro sudo paru -Rns"
 
 # get fastest mirrors
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
@@ -314,7 +305,6 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 # vpn
 alias grimaldev='sudo openvpn --config /etc/openvpn/client/ewan_grimaldev.ovpn'
 alias vpn_maison='sudo openvpn --config /etc/openvpn/client/ewan_grimmely.ovpn'
-# alias vpn_sh8tan='sudo openvpn --config /etc/openvpn/client/ewan_grimmely.ovpn'
 # alias grimaldev='sudo openvpn --config /etc/openvpn/client/grimaldev_grimaldev.ovpn'
 
 alias ff='pokeget random --hide-name | fastfetch --file-raw -'
@@ -336,6 +326,3 @@ starship init fish | source
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
-
-# opencode
-fish_add_path /home/ewan/.opencode/bin

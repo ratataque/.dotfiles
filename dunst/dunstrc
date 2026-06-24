@@ -1,0 +1,70 @@
+[global]
+    monitor = 0
+    follow = mouse
+    geometry = "0x5-15+30"
+    indicate_hidden = yes
+    shrink = yes
+    transparency = 0
+    notification_height = 0
+    separator_height = 1
+    padding = 2
+    horizontal_padding = 8
+    frame_width = 1
+    frame_color = "#fff5"
+    separator_color = auto
+    sort = yes
+    idle_threshold = 120
+    font = Roboto Condensed, 11
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = center
+    show_age_threshold = 60
+    word_wrap = yes
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+    icon_position = left
+    max_icon_size = 24
+    icon_path = /usr/share/icons/elementary/status/24:/usr/share/icons/elementary/apps/24:/usr/share/icons/elementary/status/symbolic:/usr/share/icons/elementary/apps/symbolic:/usr/share/icons/elementary/devices/24:/usr/share/icons/elementary/devices/symbolic:/usr/share/icons/gnome/24x24/status/:/usr/share/icons/gnome/24x24/devices/:/usr/share/icons/hicolor/24x24/apps:/usr/share/icons/hicolor/24x24/status
+    sticky_history = yes
+    history_length = 20
+    dmenu = /usr/bin/rofi -dmenu -p dunst:
+    browser = /usr/bin/falkon --new-tab
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    startup_notification = true
+    verbosity = mesg
+    corner_radius = 9
+    force_xinerama = false
+    mouse_left_click = close_current
+    mouse_middle_click = close_all
+    mouse_right_click = do_action
+[experimental]
+    per_monitor_dpi = false
+[shortcuts]
+    close = ctrl+space
+    close_all = ctrl+shift+space
+    history = ctrl+grave
+    context = ctrl+shift+period
+[urgency_low]
+    background  = "#000c"
+    foreground  = "#999"
+    frame_color = "#fff3"
+    timeout = 10
+    icon = dialog-information-symbolic
+[urgency_normal]
+    background = "#000c"
+    foreground = "#fffa"
+    frame_color = "#fff3"
+    timeout = 10
+    icon = dialog-information-symbolic
+[urgency_critical]
+    background = "#300c"
+    foreground = "#f95"
+    frame_color = "#f30"
+    timeout = 0
+    icon = dialog-warning-symbolic
