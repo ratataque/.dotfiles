@@ -16,9 +16,12 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("foot --server")
 
     -- App startup
+    hl.exec_cmd("1password --ozone-platform=x11 --disable-gpu-sandbox %U")
     -- hl.exec_cmd("chromium --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto")
     -- hl.exec_cmd("firefox --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto")
+    hl.exec_cmd("vivaldi")
     hl.exec_cmd("kitty -e tmux -u new -s dev", { workspace = "4 silent" })
+    hl.exec_cmd("footclient btop", { workspace = "sysmon silent" })
     -- hl.exec_cmd("notion-app --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto", { workspace = "5 silent" })
 
     -- GTK theme setup

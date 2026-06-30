@@ -14,6 +14,7 @@ bind_exec("SUPER + B", "footclient bluetui")
 bind_exec("SUPER + Z", "footclient wifitui")
 bind_exec("SUPER + COMMA", "footclient pulsemixer")
 bind_exec("SUPER + T", "footclient calcurse")
+bind_exec("SUPER + S", "hyprshot -m region")
 
 -- Window management
 hl.bind("SUPER + Q", hl.dsp.window.close())
@@ -26,12 +27,13 @@ bind_exec("SUPER + X", "wlogout --protocol layer-shell")
 bind_exec("SUPER + SHIFT + B", "killall waybar; waybar")
 
 -- Utilities
+bind_exec("SUPER + P", "1password --quick-access")
 bind_exec("SUPER + SHIFT + C", "hyprpicker | wl-copy")
 bind_exec("SUPER + V", "cliphist list | fuzzel --dmenu --with-nth 2 | cliphist decode | wl-copy")
 bind_exec("SUPER + SPACE", "fuzzel")
 -- bind_exec("SUPER + A", "footclient btop")
-bind_exec("SUPER + ALT + V", "pkill fuzzel || caelestia clipboard -d")
-bind_exec("CTRL + SUPER + E", "pkill fuzzel || caelestia emoji -p")
+-- bind_exec("SUPER + ALT + V", "pkill fuzzel || caelestia clipboard -d")
+bind_exec("CTRL + SUPER + E", "fuzzel-emoji")
 bind_exec("SUPER + RETURN", "footclient hyprmon")
 
 bind_exec("CTRL + SUPER + L", "hyprlock")
@@ -70,28 +72,28 @@ hl.bind("SUPER + SHIFT + 9", hl.dsp.window.move({ workspace = 9, follow = true }
 hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 10, follow = true }))
 
 -- Caelestia global binds
-hl.bind("CTRL + SUPER + R", hl.dsp.global("caelestia:showall"))
+-- hl.bind("CTRL + SUPER + R", hl.dsp.global("caelestia:showall"))
 -- hl.bind("CTRL + SUPER + L", hl.dsp.global("caelestia:lock"))
-hl.bind("SUPER + SHIFT + S", hl.dsp.global("caelestia:screenshotFreeze"))
-hl.bind("SUPER + S", hl.dsp.global("caelestia:screenshotFreezeClip"))
-hl.bind("SUPER + ALT + T", hl.dsp.global("caelestia:sidebar"))
-hl.bind("CTRL + SUPER + T", hl.dsp.global("caelestia:refreshDevices"))
+-- hl.bind("SUPER + SHIFT + S", hl.dsp.global("caelestia:screenshotFreeze"))
+-- hl.bind("SUPER + S", hl.dsp.global("caelestia:screenshotFreezeClip"))
+-- hl.bind("SUPER + ALT + T", hl.dsp.global("caelestia:sidebar"))
+-- hl.bind("CTRL + SUPER + T", hl.dsp.global("caelestia:refreshDevices"))
 -- hl.bind("SUPER + T", hl.dsp.global("caelestia:dashboard"))
 -- hl.bind("SUPER + SPACE", hl.dsp.global("caelestia:launcher"))
-hl.bind("SUPER + O", hl.dsp.global("caelestia:clearNotifs"))
-hl.bind("CTRL + SUPER + SPACE", hl.dsp.global("caelestia:mediaToggle"), { locked = true })
+-- hl.bind("SUPER + O", hl.dsp.global("caelestia:clearNotifs"))
+-- hl.bind("CTRL + SUPER + SPACE", hl.dsp.global("caelestia:mediaToggle"), { locked = true })
 
 -- Special workspace toggles
 -- bind_exec("SUPER + A", "caelestia toggle sysmon")
-bind_exec("SUPER + N", "caelestia toggle todo")
+-- bind_exec("SUPER + N", "caelestia toggle todo")
 -- bind_exec("SUPER + M", "caelestia toggle communication")
 hl.bind("SUPER + M", hl.dsp.workspace.toggle_special("communication"))
 hl.bind("SUPER + A", hl.dsp.workspace.toggle_special("sysmon"))
-bind_exec("SUPER + BACKSPACE", "caelestia toggle communication")
+-- bind_exec("SUPER + BACKSPACE", "caelestia toggle communication")
 
 -- Brightness
-hl.bind("XF86MonBrightnessUp", hl.dsp.global("caelestia:brightnessUp"), { locked = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.global("caelestia:brightnessDown"), { locked = true })
+-- hl.bind("XF86MonBrightnessUp", hl.dsp.global("caelestia:brightnessUp"), { locked = true })
+-- hl.bind("XF86MonBrightnessDown", hl.dsp.global("caelestia:brightnessDown"), { locked = true })
 
 -- Volume
 bind_exec("XF86AudioMute", "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle", { locked = true })
