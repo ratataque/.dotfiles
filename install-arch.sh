@@ -73,6 +73,7 @@ AUR_PACKAGES=(
     otf-san-francisco
     hyprpolkitagent
     rose-pine-hyprcursor
+    xdg-desktop-portal-termfilechooser
 )
 
 CONFIG_ITEMS=(
