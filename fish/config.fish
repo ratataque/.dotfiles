@@ -235,6 +235,12 @@ alias ll='exa -l --color=always --group-directories-first' # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
+alias restart='sudo systemctl restart'
+alias start='sudo systemctl start'
+alias stop='sudo systemctl stop'
+alias statu='sudo systemctl status'
+
+
 # pacman and yay
 alias unpac='sudo pacman -Rcns' # update only standard pkgs
 alias pac='sudo pacman -S' # update only standard pkgs

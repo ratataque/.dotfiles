@@ -5,15 +5,16 @@ hl.window_rule({ match = { float = true }, center = true })
 
 hl.window_rule({ match = { class = "firefox" }, workspace = "2 silent" })
 hl.window_rule({ match = { class = "chromium" }, workspace = "1 silent" })
+hl.window_rule({ match = { class = "vivaldi" }, workspace = "2 silent" })
 hl.window_rule({ match = { class = "Notion" }, workspace = "5 silent" })
 
 hl.window_rule({
-  match = { title = "(Floating Window - Show Me The Key)" },
-  float = true,
-  border_size = 0,
-  move = { 1033, 842 },
-  size = { 491, 50 },
-  pin = true,
+    match = { title = "(Floating Window - Show Me The Key)" },
+    float = true,
+    border_size = 0,
+    move = { 1033, 842 },
+    size = { 491, 50 },
+    pin = true,
 })
 
 hl.window_rule({ match = { class = "btop" }, workspace = "special:sysmon" })

@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if ! command -v icalBuddy >/dev/null 2>&1; then
-	exit 0
-fi
-
 ALERT_IF_IN_NEXT_MINUTES=10
 ALERT_POPUP_BEFORE_SECONDS=10
 CATPUCCIN_BG=#1e1e2e
